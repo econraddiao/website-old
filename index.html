@@ -1,1 +1,121 @@
-Hello World
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>E. Conrad Diao</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Arvo|Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+<!-- HEADER -->
+<header>
+    <div class="logo"><a href="#"><img src="img/Logo.png" alt=""></a></div>
+    <div class="nav">
+        <ul>
+            <li><a class="active" href="#projecrts">Projects</a></li>
+            <li><a href="#photography">Photography</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </div>
+</header>
+<!-- MAIN -->
+<main>
+    <div class="body">
+        <div class="zoom"></div>
+        <div class="scrolling-wrapper">
+            <div class="project">
+                <h2>Caricature Cubes</h2>
+                <div class="description">
+                    <p>The contemporary virtual landscape is becoming more populated and polluted every day as our digital footprints are becoming unmanageably large, and our appearance and actions online are scrutinized by more and more friends or followers or fans.</p>
+                </div>
+                <div class="artwork">
+                    <div class="resp-container">
+                        <iframe class="resp-iframe" src="https://player.vimeo.com/video/320353927" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="artwork"><img src="img/UG3_X4_1.jpg" alt=""> </div>
+                <div class="artwork">
+                    <div class="resp-container">
+                        <iframe class="resp-iframe" src="https://player.vimeo.com/video/320353972" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="artwork"> <img src="img/UG3_X4_2.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/UG3_X4_3.jpg" alt=""> </div>
+            </div>
+            <div class="project">
+                <h2>Forced Perspective</h2>
+                <div class="description">
+                    <p>Projecting image onto actual to engage a banal infrastructural space. This intervention seeks to help the public see as an architect does and inspire wonder in unexpected places.</p>
+                </div>
+                <div class="artwork"> <img src="img/202_X1_1.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/202_X1_2.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/202_X1_3.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/202_X1_4.jpg" alt=""> </div>
+            </div>
+            <div class="project">
+                <h2>Drafting Exercises</h2>
+                <div class="artwork"> <img src="img/202_X5_1.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/202_X2_1.jpg" alt=""> </div>
+            </div>
+            <div class="project">
+                <h2>West Park Co-op</h2>
+                <div class="artwork"> <img src="img/UG2_X3_1.jpg" alt=""> </div>
+            </div>
+            <div class="project">
+                <h2>Plinth Platter House</h2>
+                <div class="artwork"> <img src="img/UG2_X2_1.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/UG2_X2_2.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/UG2_X2_3.jpg" alt=""> </div>
+            </div>
+            <div class="project">
+                <h2>Parametric Text</h2>
+                <div class="artwork"> <img src="img/202_X3_1.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/202_X3_2.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/202_X3_3.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/202_X3_4.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/202_X3_5.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/202_X3_6.jpg" alt=""> </div>
+            </div>
+            <div class="project">
+                <h2>Villa Sul Lago</h2>
+                <div class="artwork"> <img src="img/202_X4_5.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/202_X4_1.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/202_X4_2.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/202_X4_3.jpg" alt=""> </div>
+                <div class="artwork"> <img src="img/202_X4_7.jpg" alt=""> </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const artworks = document.getElementsByClassName("artwork")
+        let zoomImg = document.getElementsByClassName("zoom")[0].children[0]
+        let zoomElem = document.getElementsByClassName("zoom")[0]
+        const zoom = (e) => {
+            console.log(event.target)
+            url = event.target.src
+            zoomElem.style.background = "url(" + url + ")" 
+            zoomElem.style.backgroundSize = "contain"
+            zoomElem.style.backgroundRepeat = "no-repeat"
+            zoomElem.style.backgroundPosition = "center"
+            zoomElem.classList.add("zoomShow")
+            document.getElementsByClassName("scrolling-wrapper")[0].classList.add("hidden")
+        }
+        
+        const unZoom = (e) => {
+            console.log(event.target)
+            zoomElem.classList.remove("zoomShow")
+            document.getElementsByClassName("scrolling-wrapper")[0].classList.remove("hidden")
+        }
+        
+        zoomElem.addEventListener("click", unZoom, false)
+        
+        for (var i = 0; i < artworks.length; i ++) {
+            artworks[i].addEventListener("click", zoom, false)
+        }
+        
+    </script> 
+</main>
+</body>
+</html>

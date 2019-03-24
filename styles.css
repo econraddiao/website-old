@@ -1,0 +1,198 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Space Mono', monospace;
+    overflow-wrap: break-word;
+}
+header {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: #333;
+    align-content: center;
+    text-align: center;
+}
+
+img {
+    display: block;
+    vertical-align: top;
+    align-items: center;
+    margin: auto;
+    max-width: 667px;
+    width: 90vw;
+}
+
+iframe {
+    display: block;
+    vertical-align: top;
+    align-items: center;
+    margin: auto;
+    max-width: 667px;
+    height: 375px;
+    border: none;
+}
+
+p {
+    margin: 0;
+    font-size: 12px;
+    max-width: 667px;
+    padding: 0px;
+    white-space: pre-line;
+    word-break: keep-all;
+    word-wrap: normal;
+}
+
+ul {
+    display: block;
+    list-style-type: none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    vertical-align: middle;
+    float: right;
+}
+
+li {
+    line-height: 60px;
+    margin: auto;
+    float: left;
+    vertical-align: middle;
+}
+
+li a {
+    display: inline;
+    color: white;
+    text-align: right;
+    padding: 0px 8px;
+    text-decoration: none;
+}
+
+li a.active {
+  color: rgba(115,251,253,1.00);
+}
+
+/* Change the link color to #111 (black) on hover */
+li:hover {
+    background-color: #111;
+}
+
+.active {}
+
+.logo {
+    display: inline;
+    float: left;
+    padding: 10px;
+    margin: auto;
+}
+
+.logo img{
+    height: 40px;
+    width: 326px;
+    margin: 0;
+}
+
+.body {
+    position: relative;
+    padding: 0;
+    margin: 60px auto 0px;
+    justify-content: center;
+}
+
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding: 0px;
+    margin: 0px 10px 0px 10px;
+}
+.project {
+    padding: 0px;
+    display: inline-block;   
+    vertical-align: top;
+}
+
+.artwork {
+    padding: 5px 0px 5px 0px;
+    margin: 0;
+}
+
+.description{
+    height: 80px;
+}
+
+.resp-container {
+    z-index: -1;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.hidden {
+    display: none;
+}
+
+.zoom{
+    background: url("img/Logo.png");
+    opacity: 1;
+    display: none;
+    position: fixed;
+    top: 7.5%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    text-align: center;
+}
+.zoomShow {
+    display: inline;
+}
+
+@media only screen and (max-width: 630px) {
+    .header {
+        text-align: center;
+    }
+    
+    .logo {
+        display: inline-block;
+        align-content: center;
+        float: none;
+        margin: 0 auto;
+        padding: 10px 10px 0px 10px;
+    }
+    
+    .body {
+        margin: 100px auto 0px;
+    }
+    
+    h2 {
+        margin: 0 auto;
+    }
+    
+    ul {
+        float: none;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        padding: 0px 0px 10px 0px;
+    }
+    
+    li {
+        display: inline;
+        float: none;
+        text-align: center;
+        line-height: 30px;
+    }
+    
+    li a {
+        padding: 0px 8px 10px;
+    }
+}
