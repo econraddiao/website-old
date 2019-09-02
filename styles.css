@@ -4,45 +4,161 @@ body {
     font-family: 'Space Mono', monospace;
     overflow-wrap: break-word;
 }
-header {
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    background-color: #333;
-    align-content: center;
-    text-align: center;
-}
-
 img {
     display: block;
     vertical-align: top;
     align-items: center;
     margin: auto;
-    max-width: 667px;
-    width: 90vw;
+    width: 100%;
 }
-
-iframe {
-    display: block;
-    vertical-align: top;
-    align-items: center;
-    margin: auto;
-    max-width: 667px;
-    height: 375px;
-    border: none;
-}
-
 p {
     margin: 0;
-    font-size: 12px;
-    max-width: 667px;
     padding: 0px;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 300;
     white-space: pre-line;
     word-break: keep-all;
     word-wrap: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;  
+}
+h2 {
+    padding: 0px;
+    margin: 0px;
+}
+#main {
+    visibility: hidden;
+    transition: visibility 3s;
+    transition-delay: 1s;
+}
+#load-anim-container {
+    height: 100%;
+    width: 100%;
+    transition-delay: .5s;
+}
+#load-anim-bar {
+    position: fixed;
+    width: 0%;
+    background-color: #333;
+    color: #fff;
+}
+#load-cta-container {
+    width: 50vw;
+    padding: 48vh 25vw;
+    transition: visibility 0s;
+    transition-delay: .5s;
+}
+#load-cta-copy {
+    z-index: 1;
+    position: relative;
+    visibility: visible;
+    opacity: 0;
+    transition: opacity 2s;
+    margin: auto;
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+}
+#load-cta-copy:hover {
+    color: rgba(234, 64, 237, 1.00);
+    background: rgba(115, 251, 253, 1.00);
+    border-color: rgba(234, 64, 237, 1.00);
+}
+#main {
+    position: absolute;
+    z-index: -2;
+    top: 60px;
+    width: 100%;
+}
+#main-container {
+    overflow-y: scroll;
+    z-index: -3;
+    height: calc(100vh - 60px);
+    justify-content: center;
 }
 
+/* -- PROJECT -- */
+#project {
+    padding: 10px;
+    display: block;
+    vertical-align: top;
+}
+#project-thumbnail {
+    display: inline;
+    width: 50%;
+}
+#project-text {
+    display: inline-flex;
+    align-items: center;
+    
+}
+#project-button {
+    border: 2px solid black;
+    width: -webkit-fit-content;
+    margin: 50px auto;
+    padding: 10px;
+    text-align: center;
+}
+#project-button:hover {
+    color: rgba(234, 64, 237, 1.00);
+    background: rgba(115, 251, 253, 1.00);
+    border-color: rgba(234, 64, 237, 1.00);
+    cursor: help;
+}
+#project-grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 0px;
+    padding: 0px;
+    margin: 10px;
+    border: black 2px solid;
+    width: calc(100% - 24px);
+}
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+#item2 {
+    margin: 50px;
+    max-width: 100%;
+}
+.description {
+}
+/* -- VIMEO -- */
+
+.resp-container {
+
+}
+.resp-iframe {
+
+}
+iframe {
+    align-items: baseline;
+    margin: 0;
+    max-width: 1920px;
+    height: 67vh;
+    width: 100%;
+    border: none;
+}
+
+/* -- HEADER -- */
+
+.logo {
+    display: inline;
+    float: left;
+    padding: 10px;
+    margin: auto;
+}
+.logo img {
+    height: 40px;
+    width: 326px;
+    margin: 0;
+}
 ul {
     display: block;
     list-style-type: none;
@@ -52,14 +168,12 @@ ul {
     vertical-align: middle;
     float: right;
 }
-
 li {
     line-height: 60px;
     margin: auto;
     float: left;
     vertical-align: middle;
 }
-
 li a {
     display: inline;
     color: white;
@@ -67,133 +181,38 @@ li a {
     padding: 0px 8px;
     text-decoration: none;
 }
-
 li a.active {
-  color: rgba(115,251,253,1.00);
+    color: rgba(115, 251, 253, 1.00);
 }
-
-/* Change the link color to #111 (black) on hover */
 li:hover {
     background-color: #111;
 }
-
-.active {}
-
-.logo {
-    display: inline;
-    float: left;
-    padding: 10px;
-    margin: auto;
+#header {
+    visibility: hidden;
+    transition: visibility 3s;
+    transition-delay: 1s;
+    opacity: 0;
+    transition: opacity 3s;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: #333;
+    align-content: center;
+    text-align: center;
 }
+/* -- OLD -- */
 
-.logo img{
-    height: 40px;
-    width: 326px;
-    margin: 0;
-}
-
-.body {
-    position: relative;
-    padding: 0;
-    margin: 60px auto 0px;
+.main-body {
+    position: fixed;
+    z-index: -1;
+    top: 60px;
+    width: 100%;
+    padding: 0px;
     justify-content: center;
 }
 
-.scrolling-wrapper {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    padding: 0px;
-    margin: 0px 10px 0px 10px;    
-}
-.project {
-    padding: 0px;
-    display: inline-block;   
-    vertical-align: top;
-}
-
-.artwork {
-    padding: 5px 0px 5px 0px;
-    margin: 0;
-}
-
-.description{
-    height: 80px;
-}
-
-.resp-container {
-    z-index: -1;
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-    pointer-events: none;
-}
-
-.resp-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-.hidden {
-    display: none;
-}
-
-.zoom{
-    background: url("img/Logo.png");
-    opacity: 1;
-    display: none;
-    position: fixed;
-    top: 7.5%;
-    left: 5%;
-    width: 90%;
-    height: 85%;
-    text-align: center;
-}
-.zoomShow {
-    display: inline;
-}
+/* -- MOBILE -- */
 
 @media only screen and (max-width: 630px) {
-    .header {
-        text-align: center;
-    }
-    
-    .logo {
-        display: inline-block;
-        align-content: center;
-        float: none;
-        margin: 0 auto;
-        padding: 10px 10px 0px 10px;
-    }
-    
-    .body {
-        margin: 100px auto 0px;
-    }
-    
-    h2 {
-        margin: 0 auto;
-    }
-    
-    ul {
-        float: none;
-        margin: auto;
-        width: 100%;
-        text-align: center;
-        padding: 0px 0px 10px 0px;
-    }
-    
-    li {
-        display: inline;
-        float: none;
-        text-align: center;
-        line-height: 30px;
-    }
-    
-    li a {
-        padding: 0px 8px 10px;
-    }
 }
