@@ -1,5 +1,5 @@
 // JavaScript Document        
-
+/*
 const artworks = document.getElementsByClassName("artwork")
 let zoomImg = document.getElementsByClassName("zoom")[0].children[0]
 let zoomElem = document.getElementsByClassName("zoom")[0]
@@ -25,3 +25,4 @@ zoomElem.addEventListener("click", unZoom, false)
 for (var i = 0; i < artworks.length; i++) {
     artworks[i].addEventListener("click", zoom, false)
 }
+*/

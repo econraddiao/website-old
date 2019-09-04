@@ -51,7 +51,8 @@ function load() {
                 header.style.opacity = 1;
                 headerConainer.style.visibility = "visible";
                 main.style.visibility = "visible";
-                populateProjects();
+                loadProjects();
+                populateProjects("");
             }
         }
     }

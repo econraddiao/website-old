@@ -66,6 +66,7 @@ h2 {
     color: rgba(234, 64, 237, 1.00);
     background: rgba(115, 251, 253, 1.00);
     border-color: rgba(234, 64, 237, 1.00);
+    cursor: pointer;
 }
 #main {
     position: absolute;
@@ -108,7 +109,7 @@ h2 {
     border-color: rgba(234, 64, 237, 1.00);
     cursor: help;
 }
-#project-grid-container {
+.project-grid-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 0px;
@@ -173,19 +174,20 @@ li {
     margin: auto;
     float: left;
     vertical-align: middle;
-}
-li a {
     display: inline;
     color: white;
     text-align: right;
     padding: 0px 8px;
     text-decoration: none;
 }
-li a.active {
-    color: rgba(115, 251, 253, 1.00);
-}
 li:hover {
+    color: rgba(234, 64, 237, 1.00);
     background-color: #111;
+    border-color: rgba(234, 64, 237, 1.00);
+    cursor: pointer;
+}
+li.active {
+    color: rgba(115, 251, 253, 1.00);
 }
 #header {
     visibility: hidden;
