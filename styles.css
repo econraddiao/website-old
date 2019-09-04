@@ -1,39 +1,18 @@
+@font-face {
+    font-family: "space mono", monospace;
+    font-display: auto;
+    src: local('space mono'), url(https://fonts.googleapis.com/css?family=Space+Mono);
+}
+
 body {
     margin: 0px;
     padding: 0px;
     font-family: 'Space Mono', monospace;
     overflow-wrap: break-word;
 }
-img {
-    display: block;
-    vertical-align: top;
-    align-items: center;
-    margin: auto;
-    width: 100%;
-}
-p {
-    margin: 0;
-    padding: 0px;
-    font-size: 14px;
-    line-height: 1.6;
-    font-weight: 300;
-    white-space: pre-line;
-    word-break: keep-all;
-    word-wrap: normal;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 10;
-    -webkit-box-orient: vertical;  
-}
-h2 {
-    padding: 0px;
-    margin: 0px;
-}
-#main {
-    visibility: hidden;
-    transition: visibility 3s;
-    transition-delay: 1s;
-}
+
+/* -- LOAD -- */
+
 #load-anim-container {
     height: 100%;
     width: 100%;
@@ -68,17 +47,105 @@ h2 {
     border-color: rgba(234, 64, 237, 1.00);
     cursor: pointer;
 }
+
+/* -- TAGS -- */
+
+img {
+    display: block;
+    vertical-align: top;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+p {
+    margin: 0;
+    padding: 0px;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 300;
+    white-space: pre-line;
+    word-break: keep-all;
+    word-wrap: normal;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    -webkit-box-orient: vertical;  
+}
+h1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* -- HEADER -- */
+
+.logo {
+    display: inline;
+    float: left;
+    padding: 10px;
+    margin: auto;
+}
+.logo img {
+    height: 40px;
+    width: 326px;
+    margin: 0;
+}
+ul {
+    display: block;
+    list-style-type: none;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    vertical-align: middle;
+    float: right;
+}
+li {
+    line-height: 60px;
+    margin: auto;
+    float: left;
+    vertical-align: middle;
+    display: inline;
+    color: white;
+    text-align: right;
+    padding: 0px 8px;
+    text-decoration: none;
+}
+li:hover {
+    color: rgba(234, 64, 237, 1.00);
+    background-color: #111;
+    border-color: rgba(234, 64, 237, 1.00);
+    cursor: pointer;
+}
+li.active {
+    color: rgba(115, 251, 253, 1.00);
+}
+#header {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    padding: 0px 10px;
+    width: calc(100% - 20px);
+    background-color: #333;
+    align-content: center;
+    text-align: center;
+    visibility: hidden;
+    transition: opacity 3s;
+    transition: visibility 3s;
+    transition-delay: 1s;
+    opacity: 0;
+
+}
+
 #main {
+    visibility: hidden;
+    transition: visibility 3s;
+    transition-delay: 1s;
     position: absolute;
     z-index: -2;
     top: 60px;
     width: 100%;
-}
-#main-container {
-    overflow-y: scroll;
-    z-index: -3;
-    height: calc(100vh - 60px);
     justify-content: center;
+    height: calc(100vh - 60px);
+    overflow: hidden;
 }
 
 /* -- PROJECT -- */
@@ -147,77 +214,25 @@ iframe {
     border: none;
 }
 
-/* -- HEADER -- */
-
-.logo {
-    display: inline;
-    float: left;
-    padding: 10px;
-    margin: auto;
-}
-.logo img {
-    height: 40px;
-    width: 326px;
-    margin: 0;
-}
-ul {
-    display: block;
-    list-style-type: none;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 0;
-    vertical-align: middle;
-    float: right;
-}
-li {
-    line-height: 60px;
-    margin: auto;
-    float: left;
-    vertical-align: middle;
-    display: inline;
-    color: white;
-    text-align: right;
-    padding: 0px 8px;
-    text-decoration: none;
-}
-li:hover {
-    color: rgba(234, 64, 237, 1.00);
-    background-color: #111;
-    border-color: rgba(234, 64, 237, 1.00);
-    cursor: pointer;
-}
-li.active {
-    color: rgba(115, 251, 253, 1.00);
-}
-#header {
-    visibility: hidden;
-    transition: visibility 3s;
-    transition-delay: 1s;
-    opacity: 0;
-    transition: opacity 3s;
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    background-color: #333;
-    align-content: center;
-    text-align: center;
-}
-/* -- OLD -- */
-
-.main-body {
-    position: fixed;
-    z-index: -1;
-    top: 60px;
-    width: 100%;
-    padding: 0px;
-    justify-content: center;
-}
-
 /* -- MOBILE -- */
 
 @media only screen and (orientation: portrait) {
+    header {
+        height: 100px;
+    }
     .project-grid-container {
         display: block;
     }
+    #main {
+        top: 100px;
+        height: calc(100vh - 100px);
+
+    }
+    #main-container {
+    }
+    ul {
+        float: right;
+    }
+}
+@media only screen and (min-width: 800px) {
 }

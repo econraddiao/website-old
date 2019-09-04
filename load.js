@@ -15,8 +15,9 @@ function enter() {
     animContainer.style.visibility = "hidden";
     Copy.style.visibility = "hidden";
     headerConainer.style.opacity = 1;
+    main.style.height = null;
+    main.style.overflow = "visible";
     var hider = setTimeout(hideLoad, 500);
-
     function hideLoad() {
         animContainer.style.display = "none";
         animBar.style.display = "none";

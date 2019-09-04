@@ -11,13 +11,13 @@ let projectsDisplayed;
 function build(proj, proj_num) {
     console.log("building project");
     let thumbnail = proj.images[0];
-    let mainContainer = document.getElementById("main-container");
+    let main = document.getElementById("main");
     let projectTemplate = document.getElementById("project-grid-container");
     
     let newProject = document.createElement("div");
     newProject.className = "project-grid-container" + " " + proj_num + " " + proj.tag;
     newProject.setAttribute("style", "display: none");
-    mainContainer.appendChild(newProject);
+    main.appendChild(newProject);
     
     let item1 = document.createElement("div");
     item1.setAttribute("id", "item1");
