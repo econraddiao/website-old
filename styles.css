@@ -216,7 +216,7 @@ li.active {
 
 /* -- MOBILE -- */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (orientation: portrait) {
     .project-grid-container {
         display: block;
     }
