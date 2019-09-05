@@ -7,79 +7,83 @@ function Project(name, date, description, images, tag, index) {
     this.index = index;
 }
 
-function build(proj, proj_num) {
+function build(proj) {
     console.log("building...");
     let thumbnail = proj.images[0];
-    
+
     let newProject = document.createElement("div");
-    newProject.className = "project-grid-container" + " " + proj.tag + " " + proj.index;
+    newProject.className = "project-container" + " " + proj.tag + " " + proj.index;
+    newProject.setAttribute("id", proj.index);
     newProject.setAttribute("style", "display: none");
     main.appendChild(newProject);
-    
+
     let item1 = document.createElement("div");
     item1.setAttribute("class", "item1");
+    item1.setAttribute("onClick", "resize(this.parentNode)");
     newProject.appendChild(item1);
-    
+
     let img = document.createElement("img");
     img.setAttribute("src", "img/" + thumbnail);
     item1.appendChild(img);
-    
+
     let item2 = document.createElement("div");
     item2.setAttribute("class", "item2");
     newProject.appendChild(item2);
-    
+
 
     let h1 = document.createElement("h1");
     h1.innerHTML = proj.name;
     item2.appendChild(h1);
-    
+
     let text = document.createElement("div");
     text.setAttribute("class", "text");
     item2.appendChild(text);
-    
+
     let p = document.createElement("p");
     p.innerHTML = proj.description;
     text.appendChild(p);
-    
+
     let button = document.createElement("div");
     button.setAttribute("class", "project-button");
-    if(proj.tag == "about") {
+    if (proj.tag == "about") {
         button.innerHTML = "Reach Me";
-        button.setAttribute("onClick", "demo()");
     } else {
         button.innerHTML = "Launch Project";
         button.setAttribute("onClick", "launch(this.parentNode.parentNode.className)");
     }
     item2.appendChild(button);
+    item2.style.height = item1.clientHeight + "px";
 }
 
 function loadProjects() {
-    for(i = 0; i < projects.length; i++) {
-        build(projects[i],i);
+    for (i = 0; i < projects.length; i++) {
+        build(projects[i]);
     }
 }
 
 function showProject(project) {
+    console.log("showing...");
     project.setAttribute("style", "display: inline block");
 }
 
 function populateProjects(filter) {
     console.log("populating with filter: " + filter);
     let passCheck;
-    if(filter) {
+    if (filter) {
         passCheck = document.getElementsByClassName(filter);
     } else {
-        passCheck = document.getElementsByClassName("project-grid-container");
+        passCheck = document.getElementsByClassName("project-container");
     }
-    for(i = 0; i < passCheck.length; i++) {
-            showProject(passCheck[i]);
+    console.log(passCheck);
+    for (i = 0; i < passCheck.length; i++) {
+        showProject(passCheck[i]);
     }
 }
 
 function clearProjects() {
-    let projectsDisplayed = document.getElementsByClassName("project-grid-container");
+    let projectsDisplayed = document.getElementsByClassName("project-container");
     let i;
-    for(i = 0; i < projectsDisplayed.length; i++) {
+    for (i = 0; i < projectsDisplayed.length; i++) {
         projectsDisplayed[i].setAttribute("style", "display: none");
     }
 }
@@ -97,23 +101,23 @@ function showAll() {
     document.getElementById("projects-tab").classList.add("active");
     document.getElementById("about-tab").classList.remove("active");
     let els = document.getElementsByClassName("solo");
-    while(els[0]) {
+    while (els[0]) {
         els[0].classList.remove("solo");
     }
 }
 
 function launch(id) {
+    console.log("launching... " + id)
     clearProjects();
     populateProjects(id);
     let soloProject = document.getElementsByClassName(id)[0];
-    let item2 = soloProject.lastChild; 
+    let item2 = soloProject.lastChild;
     soloProject.class = soloProject.classList.add("solo");
     item2.lastChild.setAttribute("style", "display: none");
 
 }
 
-let projects = [
-    {
+let projects = [{
         name: "Paper Cuts",
         date: "Fall 2016",
         description: "Paper Cuts is an study of the application of algorithmic subtractive manufacture of a keepsake. The book is a deeply cultral artifact, filled with humanity's stories and which serves as a phisical memory through additive manufacturing, specifically printing. This book offers a new paradigm of communication represents oncoming technological change. The book was designed parametrically by sampling random noise to generate seeds which served as the centroid of each cell which radiates to form a voronoi pattern. This pattern was copied in negative and positive along the head and tail of the book, adding to its complexity in fabrication.",

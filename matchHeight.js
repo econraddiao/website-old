@@ -1,18 +1,23 @@
 // JavaScript Document
-function demo() {
-    console.log("demoing...")
-    let item1 = document.getElementsByClassName("item1");
-    let item2 = document.getElementsByClassName("item2");
-    console.log(item1[4].clientHeight);
-    console.log(item1[4].getAttribute("style", "height"));
-    console.log(item2[4].clientHeight);
-}
 
+// Add an event listener
+window.addEventListener("resize", function (e) {
+    resize();
+});
 
-function matchHeight() {
-    let item1 = document.getElementsByClassName("item1")[0];
-    let item2 = document.getElementsByClassName("item2")[0];
-    while(true) {
-            item2.style.height = item1.style.height;
+function resize() {
+    console.log("resizing... ");
+    let i;
+    for (i = 0; i < projects.length; i++) {
+        let id = document.getElementById(i);
+        let item1 = id.firstChild;
+        let item2 = id.lastChild;
+        let img = item1.firstChild;
+        let text = item2.children[1];
+        if (window.innerHeight < window.innerWidth) {
+            item2.style.height = item1.clientHeight - 100 + "px";
+        } else {
+            item2.style.height = null;
+        }
     }
 }

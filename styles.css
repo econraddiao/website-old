@@ -3,19 +3,16 @@
     font-display: auto;
     src: local('space mono'), url(https://fonts.googleapis.com/css?family=Space+Mono);
 }
-
-body::-webkit-scrollbar { width: 0 !important }
-
+body::-webkit-scrollbar {
+    width: 0 !important
+}
 body {
     margin: 0px;
     padding: 0px;
     font-family: 'Space Mono', monospace;
     overflow-wrap: break-word;
-
 }
-
 /* -- LOAD -- */
-
 #load-anim-container {
     height: 100%;
     width: 100%;
@@ -50,9 +47,7 @@ body {
     border-color: rgba(234, 64, 237, 1.00);
     cursor: pointer;
 }
-
 /* -- HEADER -- */
-
 .logo {
     display: inline;
     float: left;
@@ -107,9 +102,7 @@ li.active {
     transition: visibility 3s;
     transition-delay: 1s;
     opacity: 0;
-
 }
-
 #main {
     visibility: hidden;
     transition: visibility 3s;
@@ -122,10 +115,8 @@ li.active {
     height: calc(100vh - 60px);
     overflow: hidden;
 }
-
 /* -- PROJECT -- */
-
-.project-grid-container {
+.project-container {
     display: flex;
     align-items: flex-start;
     padding: 0px;
@@ -138,6 +129,7 @@ li.active {
 }
 .item1 {
     width: 66.66%;
+    min-height: 0px;
 }
 img {
     display: block;
@@ -148,8 +140,9 @@ img {
 .item2 {
     width: 33.33%;
     position: relative;
-    padding: 50px;
     display: flex;
+    height: 100px;
+    padding: 50px;
     flex-direction: column;
     align-items: stretch;
 }
@@ -161,7 +154,6 @@ h1 {
 .text {
     flex-grow: 1;
     overflow: hidden;
-    height: 100px;
 }
 p {
     margin: 0;
@@ -173,7 +165,6 @@ p {
     white-space: pre-wrap;
     overflow: hidden;
 }
-
 .project-button {
     align-self: flex-end;
     border: 2px solid black;
@@ -188,15 +179,9 @@ p {
     border-color: rgba(234, 64, 237, 1.00);
     cursor: help;
 }
-
 /* -- VIMEO -- */
-
-.resp-container {
-
-}
-.resp-iframe {
-
-}
+.resp-container {}
+.resp-iframe {}
 iframe {
     align-items: baseline;
     margin: 0;
@@ -205,23 +190,14 @@ iframe {
     width: 100%;
     border: none;
 }
-
 /* -- MOBILE -- */
-
 @media only screen and (orientation: portrait) {
     p {
         -webkit-line-clamp: 3;
     }
-    header {
-        height: 100px;
-    }
-    .project-grid-container {
+    .project-container {
         display: block;
-    }
-    #main {
-        top: 100px;
-        height: calc(100vh - 100px);
-
+        max-height: calc(100% - 24px);
     }
     ul {
         float: right;
@@ -231,5 +207,6 @@ iframe {
     }
     .item2 {
         width: calc(100% - 100px);
+        height: auto;
     }
 }
