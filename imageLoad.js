@@ -8,4 +8,4 @@ var downloadingImage = new Image();
 downloadingImage.onload = function(){
     image.src = this.src;
 };
-downloadingImage.src = "https://raw.githubusercontent.com/econraddiao/econraddiao.github.io/master/img/";
+downloadingImage.src = "https://econraddiao.github.io/img/";

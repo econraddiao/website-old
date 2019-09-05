@@ -29,7 +29,7 @@ function build(proj, proj_num) {
     newProject.appendChild(item2);
     
     let img = document.createElement("img");
-    img.setAttribute("src", "img/" + thumbnail);
+    img.setAttribute("src", "/img/" + thumbnail);
     item1.appendChild(img);
 
     let h1 = document.createElement("h1");
