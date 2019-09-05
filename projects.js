@@ -115,7 +115,7 @@ let projects = [
         name: "American Classics",
         date: "Fall 2017",
         description: "Blah Blah",
-        images: ["_DSC5923.jpg", "_DSC2950.jpg"],
+        images: ["_DSC3506.jpg", "_DSC2950.jpg"],
         tag: "photography",
         index: 3
     },
