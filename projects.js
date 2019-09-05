@@ -29,7 +29,7 @@ function build(proj, proj_num) {
     newProject.appendChild(item2);
     
     let img = document.createElement("img");
-    img.setAttribute("src", "/img/" + thumbnail);
+    img.setAttribute("src", "img/" + thumbnail);
     item1.appendChild(img);
 
     let h1 = document.createElement("h1");
@@ -115,7 +115,7 @@ let projects = [
         name: "American Classics",
         date: "Fall 2017",
         description: "Blah Blah",
-        images: ["_DSC3506.jpg", "_DSC2950.jpg"],
+        images: ["_DSC5923.jpg", "_DSC2950.jpg"],
         tag: "photography",
         index: 3
     },
