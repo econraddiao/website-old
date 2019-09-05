@@ -226,6 +226,9 @@ iframe {
 /* -- MOBILE -- */
 
 @media only screen and (orientation: portrait) {
+    p {
+        -webkit-line-clamp: 3;
+    }
     header {
         height: 100px;
     }
@@ -242,6 +245,4 @@ iframe {
     ul {
         float: right;
     }
-}
-@media only screen and (min-width: 800px) {
 }
