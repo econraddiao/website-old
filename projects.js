@@ -7,7 +7,46 @@ function Project(name, date, description, images, tag, index) {
     this.index = index;
 }
 
-function build(proj) {
+function buildLaunchedProject(id) {
+    console.log(id);
+    console.log(projects);
+    console.log(projects[id]);
+    let newProject = document.createElement("div");
+    newProject.className = "project-container solo" + " " + projects[id].tag + " " + projects[id].index;
+    newProject.setAttribute("id", projects[id].index);
+    newProject.setAttribute("style", "height: calc(100% - 24px)");
+    main.appendChild(newProject);
+    
+    let item1 = document.createElement("div");
+    item1.setAttribute("class", "item1");
+    newProject.appendChild(item1);
+    
+    for(let i = 0; i < projects[i].images.length; i++){ 
+        let img = document.createElement("img");
+        img.setAttribute("src", "img/" + "loading.gif");
+        //(projects[id].images.[i]).toString()
+        item1.appendChild(img);
+    }
+
+    let item2 = document.createElement("div");
+    item2.setAttribute("class", "item2");
+    newProject.appendChild(item2);
+
+
+    let h1 = document.createElement("h1");
+    h1.innerHTML = projects[id].name;
+    item2.appendChild(h1);
+
+    let text = document.createElement("div");
+    text.setAttribute("class", "text");
+    item2.appendChild(text);
+
+    let p = document.createElement("p");
+    p.innerHTML = projects[id].description;
+    text.appendChild(p);
+}
+
+function buildGalleryItem(proj) {
     console.log("building...");
     let thumbnail = proj.images[0];
 
@@ -19,7 +58,6 @@ function build(proj) {
 
     let item1 = document.createElement("div");
     item1.setAttribute("class", "item1");
-    item1.setAttribute("onClick", "resize(this.parentNode)");
     newProject.appendChild(item1);
 
     let img = document.createElement("img");
@@ -49,15 +87,15 @@ function build(proj) {
         button.innerHTML = "Reach Me";
     } else {
         button.innerHTML = "Launch Project";
-        button.setAttribute("onClick", "launch(this.parentNode.parentNode.className)");
+        button.setAttribute("onClick", "launch(this.parentNode.parentNode.id)");
     }
     item2.appendChild(button);
     item2.style.height = item1.clientHeight + "px";
 }
 
-function loadProjects() {
+function buildAllGalleryItems() {
     for (i = 0; i < projects.length; i++) {
-        build(projects[i]);
+        buildGalleryItem(projects[i]);
     }
 }
 
@@ -66,8 +104,8 @@ function showProject(project) {
     project.setAttribute("style", "display: inline block");
 }
 
-function populateProjects(filter) {
-    console.log("populating with filter: " + filter);
+function filterProjects(filter) {
+    console.log("filtering... " + filter);
     let passCheck;
     if (filter) {
         passCheck = document.getElementsByClassName(filter);
@@ -90,14 +128,14 @@ function clearProjects() {
 
 function showAbout() {
     clearProjects();
-    populateProjects("about");
+    filterProjects("about");
     document.getElementById("projects-tab").classList.remove("active");
     document.getElementById("about-tab").classList.add("active");
 }
 
 function showAll() {
     clearProjects();
-    populateProjects("");
+    filterProjects("");
     document.getElementById("projects-tab").classList.add("active");
     document.getElementById("about-tab").classList.remove("active");
     let els = document.getElementsByClassName("solo");
@@ -107,14 +145,25 @@ function showAll() {
 }
 
 function launch(id) {
-    console.log("launching... " + id)
+    console.log("launching... " + id);
     clearProjects();
-    populateProjects(id);
+    buildLaunchedProject(id);
+    /*
     let soloProject = document.getElementsByClassName(id)[0];
-    let item2 = soloProject.lastChild;
-    soloProject.class = soloProject.classList.add("solo");
-    item2.lastChild.setAttribute("style", "display: none");
-
+    soloProject.classList.add("solo");
+    
+    let soloAnim = document.createElement("div");
+    soloAnim.setAttribute("class", "launchAnim");
+    soloAnim.style.position = "absolute";
+    soloAnim.style.width = "calc(100% - 24px)";
+    soloAnim.style.height = "calc(100% - 24px)";
+    soloAnim.style.opacity = "1";
+    soloAnim.style.transition = "opacity .5s";
+    soloAnim.style.background = "rgba(234, 64, 237, 1.00)";
+    soloAnim.style.color = "rgba(115, 251, 253, 1.00)";    
+    soloAnim.innerHTML = "BLASTOFF!";
+    soloProject.appendChild(soloAnim);
+    */
 }
 
 let projects = [{
@@ -153,7 +202,7 @@ let projects = [{
         name: "Conrad Diao",
         date: "1997",
         description: "hi. My name is Conrad Diao, welcome to my website. I am a person with a passion for many things: Photography, Architecture, Business, Writing, and so much more. \n \n San Francisco, CA by way of \n Ann Arbor, MI by way of \n Exeter, NH by way of \n San Francisco, CA. \n \n In the past I've worked at <a>Salesforce</a>, Numie, Poshly, and QB3.",
-        images: ["_DSC5923.jpg"],
+        images: ["_DSC6153-transparent.png"],
         tag: "about",
         index: 0
     }

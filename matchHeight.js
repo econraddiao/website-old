@@ -2,10 +2,10 @@
 
 // Add an event listener
 window.addEventListener("resize", function (e) {
-    resize();
+    resizeAll();
 });
 
-function resize() {
+function resizeAll() {
     console.log("resizing... ");
     let i;
     for (i = 0; i < projects.length; i++) {
@@ -14,7 +14,7 @@ function resize() {
         let item2 = id.lastChild;
         let img = item1.firstChild;
         let text = item2.children[1];
-        if (window.innerHeight < window.innerWidth) {
+        if (window.innerWidth > 800) {
             item2.style.height = item1.clientHeight - 100 + "px";
         } else {
             item2.style.height = null;
