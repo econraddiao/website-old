@@ -44,6 +44,7 @@ body {
     text-align: center;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 #load-button:hover {
     color: rgba(234, 64, 237, 1.00);
@@ -53,10 +54,12 @@ body {
 }
 #load-image {
     clip-path: inset(0px 0px 400px 0px);
+    -webkit-clip-path: inset(0px 0px 400px 0px);
     position: absolute;
     margin: 0px auto;
     transition: all .5s;
     top: 2px;
+    left: 25%;
     width: 400px;
     height: 400px;
     cursor: pointer;
@@ -64,6 +67,7 @@ body {
 }
 #load-button:hover > #load-image {
     clip-path: inset(0px 0px 200px 0px);
+    -webkit-clip-path: inset(0px 0px 200px 0px);
     top: -202px;
 }
 
