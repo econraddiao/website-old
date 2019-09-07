@@ -39,11 +39,11 @@ function buildLaunchedProject(id) {
 
     let text = document.createElement("div");
     text.setAttribute("class", "text");
+    text.innerHTML = projects[id].description;
     item2.appendChild(text);
 
-    let p = document.createElement("p");
-    p.innerHTML = projects[id].description;
-    text.appendChild(p);
+    //let p = document.createElement("p");
+    //text.appendChild(p);
 }
 
 function buildGalleryItem(proj) {
@@ -75,11 +75,11 @@ function buildGalleryItem(proj) {
 
     let text = document.createElement("div");
     text.setAttribute("class", "text");
+    text.innerHTML = proj.description;
     item2.appendChild(text);
 
-    let p = document.createElement("p");
-    p.innerHTML = proj.description;
-    text.appendChild(p);
+    //let p = document.createElement("p");
+    //text.appendChild(p);
 
     let button = document.createElement("div");
     button.setAttribute("class", "project-button");
@@ -101,7 +101,7 @@ function buildAllGalleryItems() {
 
 function showProject(project) {
     console.log("showing...");
-    project.setAttribute("style", "display: inline block");
+    project.style.display = null;
 }
 
 function filterProjects(filter) {
@@ -201,7 +201,7 @@ let projects = [{
     {
         name: "Conrad Diao",
         date: "1997",
-        description: "hi. My name is Conrad Diao, welcome to my website. I am a person with a passion for many things: Photography, Architecture, Business, Writing, and so much more. \n \n San Francisco, CA by way of \n Ann Arbor, MI by way of \n Exeter, NH by way of \n San Francisco, CA. \n \n In the past I've worked at <a>Salesforce</a>, Numie, Poshly, and QB3.",
+        description: "hi. My name is Conrad Diao, welcome to my website. I am a person with a passion for many things: Photography, Architecture, Business, Writing, and so much more.\r\n\r\nSan Francisco, CA by way of\r\nAnn Arbor, MI by way of\r\nExeter, NH by way of\r\nSan Francisco, CA. \r\n\r\n In the past I've worked at <a href=\"https://salesforce.com\">Salesforce</a>, <a href=\"https://numie.co\">Numie</a>, <a href=\"https://poshly.com\">Poshly</a>, and <a href=\"https://qb3.org/about\">QB3</a>.",
         images: ["_DSC6153-transparent.png"],
         tag: "about",
         index: 0

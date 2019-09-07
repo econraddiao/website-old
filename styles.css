@@ -2,8 +2,10 @@
     font-family: "space mono", monospace;
     src: local('space mono'), url(https://fonts.googleapis.com/css?family=Space+Mono);
 }
+/* -- MOBILE -- */
 html {
     font-size: 14px;
+    height: 100%;
 }
 body::-webkit-scrollbar {
     width: 0 !important
@@ -13,6 +15,11 @@ body {
     padding: 0px;
     font-family: 'Space Mono', monospace;
     overflow-wrap: break-word;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    object-fit: contain;
 }
 /* -- LOAD -- */
 #load-anim-container {
@@ -59,20 +66,17 @@ body {
     margin: 0px auto;
     transition: all .5s;
     top: 2px;
-    left: 25%;
+    left: 20%;
     width: 400px;
     height: 400px;
     cursor: pointer;
-
 }
 #load-button:hover > #load-image {
     clip-path: inset(0px 0px 200px 0px);
     -webkit-clip-path: inset(0px 0px 200px 0px);
     top: -202px;
 }
-
 /* -- HEADER -- */
-
 .logo {
     display: inline;
     float: left;
@@ -140,47 +144,42 @@ li.active {
     height: calc(100vh - 60px);
     overflow: hidden;
 }
-
 /* -- PROJECT -- */
-
 .project-container {
     display: flex;
-    flex-direction: row;
     align-items: flex-start;
-    padding: 0px;
+    flex-direction: column;
+    padding: 10px;
     margin: 10px;
     border: black 2px solid;
-    width: calc(100% - 24px);
-}
-.solo {
-    height: calc(100% - 24px);
+    width: calc(100% - 44px);
+    max-height: calc(100% - 44px);
 }
 .item1 {
-    width: 66.66%;
-    padding: 50px;
-    flex-wrap: nowrap;
-}
-img {
-    margin: 0;
-    max-width: 100%;
+    display: flex;
+    flex-shrink: 1;
+    align-content: center;
+    justify-content: center;
 }
 .item2 {
-    width: 33.33%;
     display: flex;
-    padding: 50px;
     flex-direction: column;
     align-items: stretch;
+    flex-shrink: 1;
+    min-height: 0;
+    width: 100%;
 }
 h1 {
-    flex-basis: auto;
     padding: 0px;
     margin: 0px;
     font-size: 2rem;
 }
 .text {
+    display: block;
     flex-grow: 1;
     flex-shrink: 1;
     overflow: hidden;
+    white-space: pre-line;
 }
 p {
     margin: 0;
@@ -198,6 +197,7 @@ p {
     width: -webkit-fit-content;
     margin-top: 10px;
     padding: 10px;
+    align-self: flex-end;
     text-align: center;
 }
 .project-button:hover {
@@ -217,21 +217,19 @@ iframe {
     width: 100%;
     border: none;
 }
-/* -- MOBILE -- */
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 800px) {
     .project-container {
-        flex-direction: column;
-    }
-    ul {
-        float: right;
+        flex-direction: row;
+        padding: 0px;
+        margin: 10px auto;
+        width: calc(100% - 24px);
+        max-width: 1390px;
     }
     .item1 {
-        width: calc(100% - 50px);
-        padding: 25px;
+        width: 66.66%;
     }
     .item2 {
-        width: calc(100% - 50px);
-        padding: 25px;
-        height: auto;
+        width: 33.33%;
+        padding: 50px;
     }
 }

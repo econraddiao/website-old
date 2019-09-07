@@ -1,6 +1,8 @@
 // JavaScript Document
 
 // Add an event listener
+
+
 window.addEventListener("resize", function (e) {
     resizeAll();
 });
@@ -14,7 +16,7 @@ function resizeAll() {
         let item2 = id.lastChild;
         let img = item1.firstChild;
         let text = item2.children[1];
-        if (window.innerWidth > 800) {
+        if (window.innerWidth > 799) {
             item2.style.height = item1.clientHeight - 100 + "px";
         } else {
             item2.style.height = null;
