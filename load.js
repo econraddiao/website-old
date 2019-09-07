@@ -1,10 +1,11 @@
 // JavaScript Document
-var animContainer = document.getElementById("load-anim-container");
-var header = document.getElementById("header");
-var main = document.getElementById("main");
-var percBar = document.getElementById("load-percent-bar");
-var button = document.getElementById("load-button");
-var img = document.getElementById("load-image");
+let animContainer = document.getElementById("load-anim-container");
+let percBar = document.getElementById("load-percent-bar");
+let button = document.getElementById("load-button");
+let header = document.getElementById("header");
+let main = document.getElementById("main");
+let gallery = document.getElementById("gallery-wrapper");
+let img = document.getElementById("load-image");
 
 function enter() {
     console.log("entering...");
@@ -14,10 +15,12 @@ function enter() {
     animContainer.style.visibility = "hidden";
     button.style.visibility = "hidden";
     img.style.clipPath = "inset(0px 0px 400px 0px)";
-    img.style.top = "2px";
+    img.style.webkitClipPath = "inset(0px 0px 400px 0px)";
+    img.style.top = "calc(50% - 22px)";
     main.style.height = null;
     main.style.overflow = "visible";
-    var hider = setTimeout(hideLoad, 1000);
+    let hider = setTimeout(hideLoad, 1000);
+
     function hideLoad() {
         animContainer.style.display = "none";
         percBar.style.display = "none";
@@ -27,11 +30,10 @@ function enter() {
 
 function load() {
     console.log("loading...");
-    var count = 0;
-    var loader = setInterval(loadAnim, 7);
+    let count = 0;
+    let loader = setInterval(loadAnim, 7);
     buildAllGalleryItems();
     filterProjects("");
-    resizeAll();
     function loadAnim() {
         if (count == 201) {
             clearInterval(loader);
@@ -50,6 +52,7 @@ function load() {
                 header.style.visibility = "visible";
                 header.style.opacity = 1;
                 main.style.visibility = "visible";
+                resizeAll();
             }
         }
     }

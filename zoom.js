@@ -22,7 +22,7 @@ const unZoom = (e) => {
 
 zoomElem.addEventListener("click", unZoom, false)
 
-for (var i = 0; i < artworks.length; i++) {
+for (let i = 0; i < artworks.length; i++) {
     artworks[i].addEventListener("click", zoom, false)
 }
 */

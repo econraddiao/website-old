@@ -15,13 +15,13 @@ function buildLaunchedProject(id) {
     newProject.className = "project-container solo" + " " + projects[id].tag + " " + projects[id].index;
     newProject.setAttribute("id", projects[id].index);
     newProject.setAttribute("style", "height: calc(100% - 24px)");
-    main.appendChild(newProject);
-    
+    gallery.appendChild(newProject);
+
     let item1 = document.createElement("div");
     item1.setAttribute("class", "item1");
     newProject.appendChild(item1);
-    
-    for(let i = 0; i < projects[i].images.length; i++){ 
+
+    for (let i = 0; i < projects[i].images.length; i++) {
         let img = document.createElement("img");
         img.setAttribute("src", "img/" + "loading.gif");
         //(projects[id].images.[i]).toString()
@@ -54,7 +54,7 @@ function buildGalleryItem(proj) {
     newProject.className = "project-container" + " " + proj.tag + " " + proj.index;
     newProject.setAttribute("id", proj.index);
     newProject.setAttribute("style", "display: none");
-    main.appendChild(newProject);
+    gallery.appendChild(newProject);
 
     let item1 = document.createElement("div");
     item1.setAttribute("class", "item1");
@@ -148,6 +148,9 @@ function launch(id) {
     console.log("launching... " + id);
     clearProjects();
     buildLaunchedProject(id);
+    /*
+    let soloProject = document.getElementsByClassName(id)[0];
+    soloProject.classList.add("solo");
     /*
     let soloProject = document.getElementsByClassName(id)[0];
     soloProject.classList.add("solo");

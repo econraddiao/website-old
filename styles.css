@@ -17,9 +17,10 @@ body {
     overflow-wrap: break-word;
 }
 img {
-    max-width: 100%;
-    vertical-align: bottom;
+    vertical-align: top;
     object-fit: contain;
+    height: 100%;
+    width: 100%;
 }
 /* -- LOAD -- */
 #load-anim-container {
@@ -37,44 +38,45 @@ img {
     color: #fff;
 }
 #load-button {
-    width: 50vw;
-    transition: visibility 0s;
-    transition-delay: .5s;
     z-index: 1;
     position: relative;
     visibility: visible;
+    display: flex;
+    padding: 10px 20vw 10px 20vw;
     opacity: 0;
-    transition: opacity 2s;
-    margin: auto;
     color: white;
     border: 2px solid white;
-    text-align: center;
-    display: flex;
     justify-content: center;
-    align-items: center;
+    transition: visibility 0s, opacity 2s;
+    transition-delay: .5s;
 }
 #load-button:hover {
     color: rgba(234, 64, 237, 1.00);
     background: rgba(115, 251, 253, 1.00);
     border-color: rgba(234, 64, 237, 1.00);
+    transition: all .5s;
     cursor: n-resize;
 }
 #load-image {
-    clip-path: inset(0px 0px 400px 0px);
-    -webkit-clip-path: inset(0px 0px 400px 0px);
     position: absolute;
-    margin: 0px auto;
-    transition: all .5s;
-    top: 2px;
-    left: 20%;
     width: 400px;
     height: 400px;
     cursor: pointer;
+    clip-path: inset(0px 0px 400px 0px);
+    -webkit-clip-path: inset(0px 0px 400px 0px);
+    transition: all .5s;
+    margin: 0px auto;
+    top: calc(50% - 22px);
 }
-#load-button:hover > #load-image {
+#load-button:hover ~ #load-image {
     clip-path: inset(0px 0px 200px 0px);
     -webkit-clip-path: inset(0px 0px 200px 0px);
-    top: -202px;
+    top: calc(50% - 222px);
+}
+#load-image:hover {
+    clip-path: inset(0px 0px 200px 0px);
+    -webkit-clip-path: inset(0px 0px 200px 0px);
+    top: calc(50% - 222px);
 }
 /* -- HEADER -- */
 .logo {
@@ -143,6 +145,7 @@ li.active {
     justify-content: center;
     height: calc(100vh - 60px);
     overflow: hidden;
+    padding: 0 0 1px 0;
 }
 /* -- PROJECT -- */
 .project-container {
@@ -157,9 +160,12 @@ li.active {
 }
 .item1 {
     display: flex;
-    flex-shrink: 1;
     align-content: center;
     justify-content: center;
+    min-height: 0;
+    max-height: calc(100% - 44px);
+    width: 100%;
+    height: fit-content;
 }
 .item2 {
     display: flex;
@@ -192,7 +198,6 @@ p {
     overflow: hidden;
 }
 .project-button {
-    align-self: flex-end;
     border: 2px solid black;
     width: -webkit-fit-content;
     margin-top: 10px;
@@ -205,6 +210,11 @@ p {
     background: rgba(115, 251, 253, 1.00);
     border-color: rgba(234, 64, 237, 1.00);
     cursor: help;
+}
+#tr-footer {
+    height: 1px;
+    width: 100%;
+    background: transparent;
 }
 /* -- VIMEO -- */
 .resp-container {}

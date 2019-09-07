@@ -1,5 +1,5 @@
 // JavaScript Document
-var colorShifter = setInterval(shift, 500);
+let colorShifter = setInterval(shift, 500);
 function shift() {
     let aboutImg = document.getElementById("0").firstChild.firstChild;
     aboutImg.style.cssText = "clip-path: circle(50%); -webkit-clip-path: circle(50%); max-width: 75%; margin: 50px";
