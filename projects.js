@@ -8,12 +8,9 @@ function Project(name, date, description, images, tag, index) {
 }
 
 function buildLaunchedProject(id) {
-    console.log(id);
-    console.log(projects);
-    console.log(projects[id]);
     let newProject = document.createElement("div");
-    newProject.className = "project-container solo" + " " + projects[id].tag + " " + projects[id].index;
-    newProject.setAttribute("id", projects[id].index);
+    newProject.className = "project-container solo" + " " + projects[id].tag + " " + id;
+    newProject.setAttribute("id", id);
     newProject.setAttribute("style", "height: calc(100% - 24px)");
     gallery.appendChild(newProject);
 
@@ -46,13 +43,13 @@ function buildLaunchedProject(id) {
     //text.appendChild(p);
 }
 
-function buildGalleryItem(proj) {
+function buildGalleryItem(proj, index) {
     console.log("building...");
     let thumbnail = proj.images[0];
 
     let newProject = document.createElement("div");
-    newProject.className = "project-container" + " " + proj.tag + " " + proj.index;
-    newProject.setAttribute("id", proj.index);
+    newProject.className = "project-container" + " " + proj.tag + " " + index;
+    newProject.setAttribute("id", index);
     newProject.setAttribute("style", "display: none");
     gallery.appendChild(newProject);
 
@@ -95,7 +92,7 @@ function buildGalleryItem(proj) {
 
 function buildAllGalleryItems() {
     for (i = 0; i < projects.length; i++) {
-        buildGalleryItem(projects[i]);
+        buildGalleryItem(projects[i], i);
     }
 }
 
@@ -112,7 +109,7 @@ function filterProjects(filter) {
     } else {
         passCheck = document.getElementsByClassName("project-container");
     }
-    console.log(passCheck);
+    //console.log(passCheck);
     for (i = 0; i < passCheck.length; i++) {
         showProject(passCheck[i]);
     }
@@ -140,7 +137,7 @@ function showAll() {
     document.getElementById("about-tab").classList.remove("active");
     let els = document.getElementsByClassName("solo");
     while (els[0]) {
-        els[0].classList.remove("solo");
+        gallery.removeChild(els[0]);
     }
 }
 
@@ -148,25 +145,18 @@ function launch(id) {
     console.log("launching... " + id);
     clearProjects();
     buildLaunchedProject(id);
-    /*
-    let soloProject = document.getElementsByClassName(id)[0];
-    soloProject.classList.add("solo");
-    /*
-    let soloProject = document.getElementsByClassName(id)[0];
-    soloProject.classList.add("solo");
-    
+    let soloProject = document.getElementsByClassName("solo")[0];    
     let soloAnim = document.createElement("div");
     soloAnim.setAttribute("class", "launchAnim");
     soloAnim.style.position = "absolute";
-    soloAnim.style.width = "calc(100% - 24px)";
-    soloAnim.style.height = "calc(100% - 24px)";
+    soloAnim.style.width = null;
+    soloAnim.style.height = null;
     soloAnim.style.opacity = "1";
     soloAnim.style.transition = "opacity .5s";
     soloAnim.style.background = "rgba(234, 64, 237, 1.00)";
     soloAnim.style.color = "rgba(115, 251, 253, 1.00)";    
     soloAnim.innerHTML = "BLASTOFF!";
     soloProject.appendChild(soloAnim);
-    */
 }
 
 let projects = [{
@@ -175,7 +165,6 @@ let projects = [{
         description: "Paper Cuts is an study of the application of algorithmic subtractive manufacture of a keepsake. The book is a deeply cultral artifact, filled with humanity's stories and which serves as a phisical memory through additive manufacturing, specifically printing. This book offers a new paradigm of communication represents oncoming technological change. The book was designed parametrically by sampling random noise to generate seeds which served as the centroid of each cell which radiates to form a voronoi pattern. This pattern was copied in negative and positive along the head and tail of the book, adding to its complexity in fabrication.",
         images: ["202_X1_1.jpg", "202_X1_2.jpg", "202_X1_3.jpg", "202_X1_4.jpg"],
         tag: "architecture",
-        index: 4
     },
     {
         name: "American Classics",
@@ -183,7 +172,6 @@ let projects = [{
         description: "Blah Blah",
         images: ["_DSC3506.jpg", "_DSC2950.jpg"],
         tag: "photography",
-        index: 3
     },
     {
         name: "Non-American Non-Classics ",
@@ -191,7 +179,6 @@ let projects = [{
         description: "Bluh Blih",
         images: ["_DSC2950.jpg", "_DSC3506.jpg"],
         tag: "photography",
-        index: 2
     },
     {
         name: "Caricature Cubes",
@@ -199,14 +186,12 @@ let projects = [{
         description: "The contemporary virtual landscape is becoming more populated and polluted every day as our digital footprints are becoming unmanageably large, and our appearance and actions online are scrutinized by more and more friends or followers or fans. Our reaction to these trends is made clear by the rapid proliferation and adoption of automated assistants designed to simplify everything: finance, diet, shopping, scheduling, communicating, Et al. We are surrendering authorship and autonomy in as many areas of our lives as possible -- both virtual and real. Our stuff, the things that we consume and surround ourselves with, one of the most authentic and indeleble markers of our personalities. Caricature Cubes is a critical project which aims to highlight the absurdity of our impending virtualization of the real.  Consumerist and vain desires are understood as merely popular idiosyncrasies and by celebrating absurd conditions, we question our aesthetic and social celebrations and frustrate the images of our personalities.",
         images: ["UG3_X4_1.jpg"],
         tag: "architecture",
-        index: 1
     },
     {
-        name: "Conrad Diao",
+        name: "hi.",
         date: "1997",
-        description: "hi. My name is Conrad Diao, welcome to my website. I am a person with a passion for many things: Photography, Architecture, Business, Writing, and so much more.\r\n\r\nSan Francisco, CA by way of\r\nAnn Arbor, MI by way of\r\nExeter, NH by way of\r\nSan Francisco, CA. \r\n\r\n In the past I've worked at <a href=\"https://salesforce.com\">Salesforce</a>, <a href=\"https://numie.co\">Numie</a>, <a href=\"https://poshly.com\">Poshly</a>, and <a href=\"https://qb3.org/about\">QB3</a>.",
+        description: "My name is Conrad Diao, thanks for stopping by. I hope you like some of my work on display.\r\n\r\nSan Francisco, CA by way of\r\nAnn Arbor, MI by way of\r\nExeter, NH by way of\r\nSan Francisco, CA. \r\n\r\n In the past I've worked at <a href=\"https://salesforce.com\">Salesforce</a>, <a href=\"https://numie.co\">Numie</a>, <a href=\"https://poshly.com\">Poshly</a>, and <a href=\"https://qb3.org/about\">QB3</a>.",
         images: ["_DSC6153-transparent.png"],
         tag: "about",
-        index: 0
     }
 ];

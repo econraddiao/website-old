@@ -20,7 +20,8 @@
 
 <!-- HEADER -->
 
-<header id="header"> <img class="logo" src="img/Logo.png" alt="" onClick="showAll()" onClick="enter()"/>
+<header id="header">
+    <a href="#tr-header"><img class="logo" src="img/Logo.png" alt="" onClick="showAll()"/></a>
     <ul>
         <li id="projects-tab" onClick="showAll()" ontouchstart="showAll()" class="active">All</li>
         <li id="about-tab" onClick="showAbout()" ontouchstart="showAbout()">About</li>
@@ -30,8 +31,9 @@
 <!-- MAIN -->
 
 <main id="main">
+    <div id="tr-header"> </div>
     <div id="gallery-wrapper"></div>
-    <div id='tr-footer'> </div>
+    <div id="tr-footer"> </div>
 </main>
 <script src="load.js"></script> 
 <script src="matchHeight.js"></script> 
