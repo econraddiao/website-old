@@ -21,7 +21,6 @@ function buildLaunchedProject(id) {
     for (let i = 0; i < projects[i].images.length; i++) {
         let img = document.createElement("img");
         img.setAttribute("src", "img/" + "loading.gif");
-        //(projects[id].images.[i]).toString()
         item1.appendChild(img);
     }
 
@@ -38,9 +37,6 @@ function buildLaunchedProject(id) {
     text.setAttribute("class", "text");
     text.innerHTML = projects[id].description;
     item2.appendChild(text);
-
-    //let p = document.createElement("p");
-    //text.appendChild(p);
 }
 
 function buildGalleryItem(proj, index) {
@@ -106,7 +102,6 @@ function filterProjects(filter) {
     } else {
         passCheck = document.getElementsByClassName("project-container");
     }
-    //console.log(passCheck);
     for (i = 0; i < passCheck.length; i++) {
         showProject(passCheck[i]);
     }

@@ -1,15 +1,10 @@
 // JavaScript Document
-
-// Add an event listener
-
-
 window.addEventListener("resize", function (e) {
     resizeAll();
 });
 
 function resizeAll() {
-    let i;
-    for (i = 0; i < projects.length; i++) {
+    for (let i = 0; i < projects.length; i++) {
         let id = document.getElementById(i);
         let item1 = id.firstChild;
         let item2 = id.lastChild;
