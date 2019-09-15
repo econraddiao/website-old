@@ -7,28 +7,26 @@
 <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Arvo|Open+Sans" rel="stylesheet">
-<script async="" src="//www.google-analytics.com/analytics.js"></script>
 </head>
-
-<body id="body" onload="load()">
-<!-- LOAD ANIMATION -->
-
+<body>
+<!-- LOAD -->
 <div id="load-anim-container">
     <div id="load-percent-bar"></div>
-    <div id="load-button"> Hi, welcome! Click my face to enter.</div>
-    <div id="load-image" onClick="enter()"> <img src="img/_DSC6153-transparent.png" alt=""></div>
+    <div id="button-container">
+        <div id="load-button"> Hi, welcome! Click my face to enter.</div>
+        <div id="load-image" onClick="enter()"> <img src="img/_DSC6153-load.png" alt=""></div>
+    </div>
 </div>
 
 <!-- HEADER -->
-
-<header id="header">
-    <a href="#tr-header"><img class="logo" src="img/Logo.png" alt="" onClick="showAll()"/></a>
+<header id="header"> <a href="#tr-header"><img class="logo" src="img/Logo.png" alt="" onClick="showAll()"/></a>
     <ul>
         <li id="projects-tab" onClick="showAll()" ontouchstart="showAll()" class="active">All</li>
-        <a href="#tr-footer"><li id="about-tab" onClick="showAbout()" ontouchstart="showAbout()">About</li></a>
+        <a href="#tr-footer">
+        <li id="about-tab" onClick="showAbout()" ontouchstart="showAbout()">About</li>
+        </a>
     </ul>
 </header>
-
 <!-- MAIN -->
 
 <main id="main">
@@ -36,10 +34,17 @@
     <div id="gallery-wrapper"></div>
     <div id="tr-footer"> </div>
 </main>
+
+<script src="projects.js" asnyc></script>
+<script src="load.js" async></script>
+<script src="matchHeight.js"async></script> 
+
+
+<!--
 <script src="load.js"></script> 
-<script src="matchHeight.js"></script> 
 <script src="projects.js"></script> 
 <script src="zoom.js"></script> 
 <script src="vainity.js"></script>
+-->
 </body>
 </html>

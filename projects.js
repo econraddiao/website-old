@@ -75,9 +75,6 @@ function buildGalleryItem(proj, index) {
     text.innerHTML = proj.description;
     item2.appendChild(text);
 
-    //let p = document.createElement("p");
-    //text.appendChild(p);
-
     let button = document.createElement("div");
     button.setAttribute("class", "project-button");
     if (proj.tag == "about") {
