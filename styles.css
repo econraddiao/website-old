@@ -8,6 +8,17 @@
         height: 100%;
     }
 }
+@keyframes enterPercentBar {
+    0% {
+        height: 100%;
+        top: 0;
+        width: 100%;
+    }
+    100% {
+        height: 60px;
+        visibility: hidden;
+    }
+}
 @keyframes opaque {
     100% {
         opacity: 1;
@@ -18,8 +29,6 @@
         visibility: visible;
     }
 }
-
-
 /* -- MOBILE -- */
 html {
     font-size: 14px;
@@ -43,6 +52,7 @@ img {
 }
 /* -- LOAD -- */
 #load-anim-container {
+    z-index: 20;
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -63,7 +73,6 @@ img {
     justify-content: center;
 }
 #load-button {
-    z-index: 1;
     position: relative;
     visibility: hidden;
     display: flex;
@@ -144,7 +153,7 @@ li.active {
 #header {
     position: fixed;
     top: 0;
-    z-index: -1;
+    z-index: 10;
     padding: 0px 10px;
     width: calc(100% - 20px);
     background-color: #333;
@@ -157,13 +166,10 @@ li.active {
     opacity: 0;
 }
 #main {
-    z-index: -2;
     position: absolute;
     top: 0px;
-    visibility: hidden;
-    transition: visibility 3s;
-    transition-delay: 1s;
     width: 100%;
+    visibility: hidden;
     justify-content: center;
     overflow: hidden;
     padding: 0 0 1px 0;
@@ -176,7 +182,6 @@ li.active {
     background: transparent;
 }
 #gallery-wrapper {
-    z-index: -2;
 }
 /* -- PROJECT -- */
 .project-container {
@@ -258,6 +263,13 @@ iframe {
     width: 100%;
     border: none;
 }
+
+.hidden {
+    display: none;
+}
+
+/* -- DESKTOP --*/
+
 @media only screen and (min-width: 800px) {
     .project-container {
         flex-direction: row;
