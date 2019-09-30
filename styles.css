@@ -71,12 +71,13 @@ img {
 #button-container {
     display: flex;
     justify-content: center;
+    width: 50vw;
 }
 #load-button {
     position: relative;
     visibility: hidden;
     display: flex;
-    padding: 10px 20vw 10px 20vw;
+    padding: 10px;
     opacity: 0;
     color: white;
     animation: visi 0s linear 1s 1 normal forwards running, opaque .5s linear 1s 1 normal forwards running;
@@ -108,15 +109,35 @@ img {
     -webkit-clip-path: inset(0px 0px 0px 0px);
 }
 /* -- HEADER -- */
-
+#header {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: #333;
+    align-content: center;
+    text-align: center;
+    visibility: visible;
+    transition: opacity 3s;
+    transition: visibility 3s;
+    transition-delay: 1s;
+    opacity: 0;
+}
 .logo {
+    align-self: flex-start;
     display: inline;
     float: left;
-    padding: 10px;
-    margin: auto;
+    margin: 10px;
     height: 40px;
-    width: 326px;
+    width: 200px;
     cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("img/Logo-mobile.png");
+    
 }
 .logo img {
     margin: 0;
@@ -124,7 +145,7 @@ img {
 ul {
     display: block;
     list-style-type: none;
-    margin: 0 auto;
+    margin: 0 0 0 auto;
     overflow: hidden;
     padding: 0;
     vertical-align: middle;
@@ -149,21 +170,6 @@ li:hover {
 }
 li.active {
     color: rgba(115, 251, 253, 1.00);
-}
-#header {
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    padding: 0px 10px;
-    width: calc(100% - 20px);
-    background-color: #333;
-    align-content: center;
-    text-align: center;
-    visibility: visible;
-    transition: opacity 3s;
-    transition: visibility 3s;
-    transition-delay: 1s;
-    opacity: 0;
 }
 #main {
     position: absolute;
