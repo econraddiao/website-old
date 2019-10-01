@@ -20,6 +20,7 @@ function enter() {
     animContainer.style.height = "60px";
     animContainer.style.pointerEvents = "none";
     header.style.opacity = 1;
+    header.style.visibility = "visible";
     img.style.clipPath = "inset(0px 0px 400px 0px)";
     img.style.webkitClipPath = "inset(0px 0px 400px 0px)";
     img.style.top = "calc(50% - 22px)";
