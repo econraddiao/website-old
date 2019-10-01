@@ -199,8 +199,7 @@ li.active {
     margin: 10px;
     border: black 2px solid;
     width: calc(100% - 44px);
-    max-height: 80vh;
-}
+s}
 .item1 {
     width: 100%;
     min-height: 0;
