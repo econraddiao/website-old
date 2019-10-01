@@ -199,15 +199,14 @@ li.active {
     margin: 10px;
     border: black 2px solid;
     width: calc(100% - 44px);
-s}
+}
 .item1 {
     width: 100%;
     min-height: 0;
     max-height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 .item1 > img {
     max-height: 80vh;
@@ -241,7 +240,7 @@ p {
     font-weight: 300;
     text-align: left;
     white-space: pre-wrap;
-    overflow: hidden;
+    overflow: visible;
 }
 .project-button {
     border: 2px solid black;
@@ -278,9 +277,6 @@ iframe {
     width: 100%;
     border: none;
 }
-.hidden {
-    display: none;
-}
 
 /* -- DESKTOP --*/
 
@@ -306,4 +302,13 @@ iframe {
         width: 33.33%;
         padding: 50px;
     }
+}
+
+.hidden {
+    display: none;
+}
+.solo {
+    flex-direction: column;
+    height: none;
+    max-height: none;
 }
