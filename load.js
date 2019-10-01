@@ -12,9 +12,9 @@ filterProjects("");
 
 function enter() {
     console.log("entering...");
+    percBar.style.top = "0";
     main.style.visibility = "visible";
     buttonContainer.style.display = "none";
-    percBar.style.top = "0";
     percBar.style.width = "100%";
     percBar.style.animationName = "enterPercentBar";
     animContainer.style.height = "60px";
