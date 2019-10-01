@@ -20,7 +20,6 @@ function buildGalleryItem(proj, index) {
     item2.setAttribute("class", "item2");
     newProject.appendChild(item2);
 
-
     let h1 = document.createElement("h1");
     h1.innerHTML = proj.name;
     item2.appendChild(h1);
@@ -40,7 +39,6 @@ function buildGalleryItem(proj, index) {
         button.setAttribute("onClick", "launch(this.parentNode.parentNode.id)");
     }
     item2.appendChild(button);
-    item2.style.height = item1.clientHeight + "px";
 }
 
 function buildAllGalleryItems() {

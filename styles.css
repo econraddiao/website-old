@@ -33,7 +33,7 @@
 html {
     font-size: 14px;
     height: 100%;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
 }
 body {
     margin: 0px;
@@ -198,7 +198,7 @@ li.active {
     margin: 10px;
     border: black 2px solid;
     width: calc(100% - 44px);
-    max-height: calc(100% - 44px);
+    max-height: calc(100% - 100px);
 }
 .item1 {
     display: flex;
@@ -206,9 +206,8 @@ li.active {
     align-content: center;
     justify-content: center;
     min-height: 0;
-    max-height: calc(100% - 44px);
+    max-height: calc(100% - 100px);
     width: 100%;
-    height: fit-content;
 }
 .item2 {
     display: flex;

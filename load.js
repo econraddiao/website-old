@@ -27,5 +27,5 @@ function enter() {
     main.style.height = null;
     main.style.overflow = "visible";
     main.style.visibility = "visible";
-    resizeAll();
+    //resizeAll();
 }
