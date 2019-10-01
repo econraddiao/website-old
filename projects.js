@@ -19,14 +19,14 @@ let projects = [
         name: "West Park House",
         date: "Winter 2018",
         description: "The contemporary virtual landscape is becoming more populated and polluted every day as our digital footprints are becoming unmanageably large, and our appearance and actions online are scrutinized by more and more friends or followers or fans. Our reaction to these trends is made clear by the rapid proliferation and adoption of automated assistants designed to simplify everything: finance, diet, shopping, scheduling, communicating, Et al. We are surrendering authorship and autonomy in as many areas of our lives as possible -- both virtual and real. Our stuff, the things that we consume and surround ourselves with, one of the most authentic and indeleble markers of our personalities. Caricature Cubes is a critical project which aims to highlight the absurdity of our impending virtualization of the real.  Consumerist and vain desires are understood as merely popular idiosyncrasies and by celebrating absurd conditions, we question our aesthetic and social celebrations and frustrate the images of our personalities.",
-        images: ["img/small/UG2_X3_1.jpg", "img/small/UG2_X3_2.jpg"],
+        images: ["img/small/UG2_X3_1.jpg"],
         tag: "architecture",
     },
     {
         name: "Plinth Platter House",
         date: "Winter 2018",
         description: "The contemporary virtual landscape is becoming more populated and polluted every day as our digital footprints are becoming unmanageably large, and our appearance and actions online are scrutinized by more and more friends or followers or fans. Our reaction to these trends is made clear by the rapid proliferation and adoption of automated assistants designed to simplify everything: finance, diet, shopping, scheduling, communicating, Et al. We are surrendering authorship and autonomy in as many areas of our lives as possible -- both virtual and real. Our stuff, the things that we consume and surround ourselves with, one of the most authentic and indeleble markers of our personalities. Caricature Cubes is a critical project which aims to highlight the absurdity of our impending virtualization of the real.  Consumerist and vain desires are understood as merely popular idiosyncrasies and by celebrating absurd conditions, we question our aesthetic and social celebrations and frustrate the images of our personalities.",
-        images: ["img/small/UG2_X2_1.jpg", "img/small/UG2_X2_2.jpg"],
+        images: ["img/small/UG2_X2_1.jpg", "img/small/UG2_X2_2.jpg", "img/small/UG2_X2_3.jpg"],
         tag: "architecture",
     },
     {
@@ -47,7 +47,7 @@ let projects = [
         name: "Villa Sul Lago Study",
         date: "Fall 2018",
         description: "Bluh Blih",
-        images: ["img/small/202_X4_1.jpg", "img/small/202_X4_2.jpg", "img/small/202_X4_3.jpg", "img/small/202_X4_4.jpg", "img/small/202_X4_5.jpg", "img/small/202_X4_6.jpg", "img/small/202_X4_7.jpg"],
+        images: ["img/small/202_X4_1.jpg", "img/small/202_X4_2.jpg", "img/small/202_X4_3.jpg", "img/small/202_X4_5.jpg", "img/small/202_X4_6.jpg", "img/small/202_X4_7.jpg"],
         tag: "photography",
     },
     {

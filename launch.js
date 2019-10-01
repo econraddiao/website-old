@@ -27,9 +27,9 @@ function buildLaunchedProject(id) {
     item1.setAttribute("class", "item1");
     newProject.appendChild(item1);
 
-    for (let i = 0; i < projects.images.length; i++) {
+    for (let i = 0; i < projects[id].images.length; i++) {
         let img = document.createElement("img");
-        img.setAttribute("src", projects[i]images[]);
+        img.setAttribute("src", projects[id].images[i]);
         item1.appendChild(img);
     }
 
