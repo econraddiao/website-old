@@ -78,6 +78,8 @@ img {
     visibility: hidden;
     display: flex;
     padding: 10px;
+    width: 300px;
+    justify-content: center;
     opacity: 0;
     color: white;
     animation: visi 0s linear 1s 1 normal forwards running, opaque .5s linear 1s 1 normal forwards running;
@@ -109,23 +111,6 @@ img {
     -webkit-clip-path: inset(0px 0px 0px 0px);
 }
 /* -- HEADER -- */
-#header {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
-    position: fixed;
-    top: 0;
-    z-index: 10;
-    width: 100%;
-    background-color: #333;
-    align-content: center;
-    text-align: center;
-    visibility: visible;
-    transition: opacity 3s;
-    transition: visibility 3s;
-    transition-delay: 1s;
-    opacity: 0;
-}
 .logo {
     align-self: flex-start;
     display: inline;
@@ -181,13 +166,26 @@ li.active {
     padding: 0 0 1px 0;
 }
 #tr-header {
-    position: relative;
-    top: 0px;
     height: 60px;
     width: 100%;
     background: transparent;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background-color: #333;
+    align-content: center;
+    text-align: center;
+    visibility: visible;
+    transition: opacity 3s;
+    transition: visibility 3s;
+    transition-delay: 1s;
+    opacity: 0;
 }
 #gallery-wrapper {
+    padding-top: 60px;
 }
 /* -- PROJECT -- */
 .project-container {
