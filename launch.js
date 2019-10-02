@@ -2,19 +2,7 @@ function launch(id) {
     console.log("launching... " + id);
     clearProjects();
     buildLaunchedProject(id);
-    let soloProject = document.getElementsByClassName("solo")[0];    
-    /*let soloAnim = document.createElement("div");
-    soloAnim.setAttribute("class", "launchAnim");
-    soloAnim.innerHTML = "BLASTOFF!";
-    soloProject.appendChild(soloAnim);
-    soloAnim.style.position = "absolute";
-    soloAnim.style.width = null;
-    soloAnim.style.height = null;
-    soloAnim.style.opacity = "1";
-    soloAnim.style.transition = "opacity .5s";
-    soloAnim.style.background = "rgba(234, 64, 237, 1.00)";
-    soloAnim.style.color = "rgba(115, 251, 253, 1.00)";   
-    */
+    let soloProject = document.getElementsByClassName("solo")[0];
 }
 
 function buildLaunchedProject(id) {

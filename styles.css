@@ -70,6 +70,7 @@ img {
     display: flex;
     justify-content: center;
     width: 50vw;
+    cursor: pointer;
 }
 #load-button {
     position: relative;
@@ -93,14 +94,12 @@ img {
     -webkit-clip-path: inset(0px 0px 200px 0px);
     transition: all .5s;
     margin: 0px auto;
-    cursor: pointer;
 }
 
 #button-container:hover #load-button {
     color: rgba(234, 64, 237, 1.00);
     background: rgba(115, 251, 253, 1.00);
     border-color: rgba(234, 64, 237, 1.00);
-    cursor: n-resize;
 }
 
 #button-container:hover #load-image {
@@ -114,6 +113,7 @@ img {
     width:100%;
     top:0;
     left:0;
+    
     visibility: hidden;
     justify-content: center;
     overflow: hidden;
@@ -181,9 +181,10 @@ li.active {
 }
 #gallery-wrapper {
     height:calc(100% - 60px);
-    width:100%; 
-    margin-top: 60px; 
-    z-index: 1; 
+    width:calc(100% - 20px); 
+    margin: 60px 0px; 
+    padding: 0px 10px;
+    z-index: 1;
     overflow-y: scroll; 
     -webkit-overflow-scrolling: touch;
 }
@@ -196,9 +197,8 @@ li.active {
     align-items: flex-start;
     flex-direction: column;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 0px;
     border: black 2px solid;
-    width: calc(100% - 44px);
 }
 .item1 {
     width: 100%;
@@ -285,18 +285,19 @@ iframe {
         background-image: url("img/Logo.png");
         width: 400px;
     }
+    #gallery-wrapper {
+        max-width: 1390px;
+        margin: 60px auto;
+
+    }
     .project-container {
         flex-direction: row;
-        padding: 0px;
-        margin: 10px auto;
-        max-width: 1390px;
     }
     .item1 {
         width: 66.66%;
     }
-    .about img {
-        width: calc(100% - 100px);
-        margin: 50px;
+    .about .item1{
+        padding: 50px;
     }
     .item2 {
         width: 33.33%;
@@ -309,6 +310,11 @@ iframe {
 }
 .solo {
     flex-direction: column;
+    align-items: center;
     height: none;
     max-height: none;
+    padding: 50px;
+}
+.solo * {
+    margin: 25px 0px;
 }
