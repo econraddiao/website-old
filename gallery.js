@@ -76,6 +76,7 @@ function clearProjects() {
 function showAbout() {
     document.getElementById("projects-tab").classList.remove("active");
     document.getElementById("about-tab").classList.add("active");
+    document.getElementById("gallery-wrapper").scroll(0,99999);
 }
 
 function showAll() {
@@ -87,4 +88,5 @@ function showAll() {
     while (els[0]) {
         gallery.removeChild(els[0]);
     }
+    document.getElementById("gallery-wrapper").scroll(0,0);
 }
