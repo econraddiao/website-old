@@ -76,8 +76,7 @@ function clearProjects() {
 function showAll() {
     clearProjects();
     filterProjects("");
-    //document.getElementById("projects-tab").classList.add("active");
-    //document.getElementById("about-tab").classList.remove("active");
+    document.getElementById("projects-tab").classList.add("active");
     let els = document.getElementsByClassName("solo");
     while (els[0]) {
         gallery.removeChild(els[0]);
@@ -86,7 +85,5 @@ function showAll() {
 }
 function showAbout() {
     showAll();
-    //document.getElementById("projects-tab").classList.remove("active");
-    //document.getElementById("about-tab").classList.add("active");
     document.getElementById("gallery-wrapper").scroll(0,99999);
 }

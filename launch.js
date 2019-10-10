@@ -1,5 +1,6 @@
 function launch(id) {
     console.log("launching... " + id);
+    document.getElementById("projects-tab").classList.remove("active");
     clearProjects();
     buildLaunchedProject(id);
     let soloProject = document.getElementsByClassName("solo")[0];

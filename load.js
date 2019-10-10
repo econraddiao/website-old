@@ -4,7 +4,8 @@ let percBar = document.getElementById("load-percent-bar");
 let buttonContainer = document.getElementById("button-container");
 let header = document.getElementById("tr-header");
 let main = document.getElementById("main");
-let gallery = document.getElementById("gallery-wrapper");
+let galleryWrapper = document.getElementById("gallery-wrapper");
+let gallery = document.getElementById("gallery");
 let img = document.getElementById("load-image");
 
 buildAllGalleryItems();

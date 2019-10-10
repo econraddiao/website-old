@@ -181,15 +181,18 @@ li.active {
 }
 #gallery-wrapper {
     height:calc(100% - 60px);
-    width:calc(100% - 20px); 
+    width: 100%;
     margin: 60px 0px; 
-    padding: 0px 10px;
     z-index: 1;
     overflow-y: scroll; 
     -webkit-overflow-scrolling: touch;
 }
 #gallery-wrapper::-webkit-scrollbar {
     width: 0 !important;
+}
+#gallery {
+    padding: 0px 10px;
+    width:calc(100% - 20px); 
 }
 /* -- PROJECT -- */
 .project-container {
@@ -285,9 +288,9 @@ iframe {
         background-image: url("img/Logo.png");
         width: 400px;
     }
-    #gallery-wrapper {
+    #gallery {
         max-width: 1390px;
-        margin: 60px auto;
+        margin: 0px auto;
 
     }
     .project-container {
@@ -313,8 +316,8 @@ iframe {
     align-items: center;
     height: none;
     max-height: none;
-    padding: 50px;
+    padding: 10px;
 }
 .solo * {
-    margin: 25px 0px;
+    margin: 10px auto;
 }
