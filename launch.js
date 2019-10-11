@@ -1,6 +1,14 @@
 function launch(id) {
     console.log("launching... " + id);
+
+    var state = 1;
+    var title = 'Project';
+    var url = 'project.html';
+
+    history.pushState(state, title, url);
+
     document.getElementById("projects-tab").classList.remove("active");
+    /*
     clearProjects();
     buildLaunchedProject(id);
     let soloProject = document.getElementsByClassName("solo")[0];
@@ -25,4 +33,5 @@ function buildLaunchedProject(id) {
         img.setAttribute("src", projects[id].images[i]);
         newProject.appendChild(img);
     }
+    */
 }
