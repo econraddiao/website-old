@@ -1,4 +1,5 @@
 // JavaScript Document
+//index.html document elements
 let animContainer = document.getElementById("load-anim-container");
 let percBar = document.getElementById("load-percent-bar");
 let buttonContainer = document.getElementById("button-container");
@@ -8,11 +9,14 @@ let galleryWrapper = document.getElementById("gallery-wrapper");
 let gallery = document.getElementById("gallery");
 let img = document.getElementById("load-image");
 
+//delcare global var projects
 let projects;
 
+//new xhr for projects.json
 let xhr = new XMLHttpRequest();
 xhr.open('GET', 'projects.json');
 
+//if xhr load data into projects and build gallery
 xhr.onload = function () {
     let projects = JSON.parse(this.responseText);
     console.log(projects[0]);
@@ -20,13 +24,13 @@ xhr.onload = function () {
     filterProjects("");
     vanity();
 }
-
+//handel error
 xhr.onerror = function() {
-  console.log('There was an error!');
+  console.error('ERROR XMLHttpRequest failed!');
 };
 
 xhr.send();
-
+//animate site enter
 function enter() {
     console.log("entering...");
     percBar.style.top = "0";
