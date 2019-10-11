@@ -14,7 +14,7 @@ function buildGalleryItem(proj, index) {
     let img = document.createElement("img");
     img.setAttribute("src", thumbnail);
     item1.appendChild(img);
-    
+
     let item2 = document.createElement("div");
     item2.setAttribute("class", "item2");
     newProject.appendChild(item2);
@@ -32,7 +32,7 @@ function buildGalleryItem(proj, index) {
     button.setAttribute("class", "project-button");
     if (proj.tag == "about") {
         button.innerHTML = "Reach Me";
-        button.setAttribute("onClick","location.href='https://www.linkedin.com/in/ecdiao/';");
+        button.setAttribute("onClick", "location.href='https://www.linkedin.com/in/ecdiao/';");
     } else {
         button.innerHTML = "Launch Project";
         button.setAttribute("onClick", "launch(this.parentNode.parentNode.id)");
@@ -80,9 +80,10 @@ function showAll() {
     while (els[0]) {
         gallery.removeChild(els[0]);
     }
-    document.getElementById("gallery-wrapper").scroll(0,0);
+    document.getElementById("gallery-wrapper").scroll(0, 0);
 }
+
 function showAbout() {
     showAll();
-    document.getElementById("gallery-wrapper").scroll(0,99999);
+    document.getElementById("gallery-wrapper").scroll(0, 99999);
 }

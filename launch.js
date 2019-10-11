@@ -1,3 +1,7 @@
+let button = document.querySelector("project-button");
+
+button.addEventListener("click", launch(this));
+
 function launch(id) {
     console.log("launching project " + id);
     //history.pushState(null, null, id);
