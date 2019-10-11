@@ -17,5 +17,4 @@ function resize(projectContainer) {
     text.cssText += "-webkit-line-clamp = 3"; //text.clientHeight / 14;
     //text.clientHeight / 14
 
-}
-}
+};
