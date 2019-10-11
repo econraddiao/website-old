@@ -8,15 +8,21 @@ let galleryWrapper = document.getElementById("gallery-wrapper");
 let gallery = document.getElementById("gallery");
 let img = document.getElementById("load-image");
 
-let projectsRequest = new XMLHttpRequest();
-projectsRequest.open('GET', 'projects.json');
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'projects.json');
 
-projectsRequest.onload = function () {
-    let projectsData = JSON.parse(projectsData.responseText);
+xhr.onload = function () {
+    let projectsData = JSON.parse(this.responseText);
     console.log(projectsData[0]);
     buildAllGalleryItems(projectsData);
     filterProjects("");
 }
+
+xhr.onerror = function() {
+  console.log('There was an error!');
+};
+
+xhr.send();
 
 function enter() {
     console.log("entering...");
