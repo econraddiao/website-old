@@ -1,13 +1,13 @@
-// JavaScript Document
 //index.html document elements
 let animContainer = document.getElementById("load-anim-container");
 let percBar = document.getElementById("load-percent-bar");
-let buttonContainer = document.getElementById("button-container");
+let loadButton = document.getElementById("button-container");
 let header = document.getElementById("tr-header");
 let main = document.getElementById("main");
 let galleryWrapper = document.getElementById("gallery-wrapper");
 let gallery = document.getElementById("gallery");
 let img = document.getElementById("load-image");
+let projectButton;
 
 //delcare global var projects
 let projects;
@@ -24,7 +24,7 @@ xhr.onload = function () {
     filterProjects("");
     vanity();
 }
-//handel error
+//handle error
 xhr.onerror = function() {
   console.error('ERROR XMLHttpRequest failed!');
 };
@@ -35,7 +35,7 @@ function enter() {
     console.log("entering...");
     percBar.style.top = "0";
     main.style.visibility = "visible";
-    buttonContainer.style.display = "none";
+    loadButon.style.display = "none";
     percBar.style.width = "100%";
     percBar.style.animationName = "enterPercentBar";
     animContainer.style.height = "60px";

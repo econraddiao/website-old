@@ -28,7 +28,7 @@ function buildGalleryItem(proj, index) {
     text.innerHTML = proj.description;
     item2.appendChild(text);
 
-    let button = document.createElement("div");
+    let button = document.createElement("button");
     button.setAttribute("class", "project-button");
     if (proj.tag == "about") {
         button.innerHTML = "Reach Me";
