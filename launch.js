@@ -19,7 +19,7 @@ function handleClick(event) {
         if (element.nodeName === "BUTTON") {
             // The user clicked on a <button> or clicked on an element inside a <button>
             // with a class name called "foo"
-            launch(this.parentNode.parentNode.id);
+            launch(element.parentNode.parentNode.id);
             break;
         }
         element = element.parentNode;
