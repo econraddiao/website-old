@@ -8,8 +8,14 @@ let galleryWrapper = document.getElementById("gallery-wrapper");
 let gallery = document.getElementById("gallery");
 let img = document.getElementById("load-image");
 
-buildAllGalleryItems();
-filterProjects("");
+let projectsRequest = new XMLHttpRequest();
+projectsRequest.open('GET', 'projects.json');
+
+projectsRequest.onload = function () {
+    let projectsData = JSON.parse(projectsData.responseText);
+    buildAllGalleryItems(projectsData);
+    filterProjects("");
+}
 
 function enter() {
     console.log("entering...");

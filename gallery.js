@@ -41,7 +41,7 @@ function buildGalleryItem(proj, index) {
     item2.appendChild(button);
 }
 
-function buildAllGalleryItems() {
+function buildAllGalleryItems(projects) {
     for (i = 0; i < projects.length; i++) {
         buildGalleryItem(projects[i], i);
     }
