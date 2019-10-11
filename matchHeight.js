@@ -6,9 +6,8 @@ window.addEventListener("resize", function () {
 function resizeAll() {
     let galleryElements = document.getElementsByClassName("project-container");
         for(let els in galleryElements) {
-        let id = document.getElementById(i);
-        let item1 = id.firstChild;
-        let item2 = id.lastChild;
+        let item1 = els.firstChild;
+        let item2 = els.lastChild;
         let img = item1.firstChild;
         let text = item2.children[1];
 
