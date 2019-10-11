@@ -1,4 +1,4 @@
-let projects = [
+[
     {
         name: "Caricature Cubes",
         date: "Fall 2019",
@@ -48,4 +48,4 @@ let projects = [
         images: ["img/headshot-full.png"],
         tag: "about",
     }
-];
+]
