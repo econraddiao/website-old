@@ -13,7 +13,6 @@ function buildGalleryItem(proj, index) {
 
     let img = document.createElement("img");
     img.setAttribute("src", thumbnail);
-    //img.setAttribute("onload", "upgradeImage(this)");
     item1.appendChild(img);
     
     let item2 = document.createElement("div");
