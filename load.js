@@ -12,22 +12,27 @@ let projectButton;
 //delcare global var projects
 let projects;
 let galleryElements;
+
 //new xhr for projects.json
 let xhr = new XMLHttpRequest();
 xhr.open('GET', 'projects.json');
 
 //if xhr load data into projects and build gallery
 xhr.onload = function () {
-    let projects = JSON.parse(this.responseText);
-    console.log(projects[0]);
-    buildAllGalleryItems(projects);
-    filterProjects("");
-    vanity();
-    let galleryElements = document.getElementsByClassName("project-container");
+    if (xhr.status => 200 && xhr.status < 400) {
+        let projects = JSON.parse(this.responseText);
+        buildAllGalleryItems(projects);
+        filterProjects("");
+        vanity();
+        let galleryElements = document.getElementsByClassName("project-container");
+    } else {
+        console.error('ERROR XMLHttpRequest returned error!');
+    }
+
 }
 //handle error
-xhr.onerror = function() {
-  console.error('ERROR XMLHttpRequest failed!');
+xhr.onerror = function () {
+    console.error('ERROR XMLHttpRequest failed!');
 };
 
 xhr.send();
