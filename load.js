@@ -13,6 +13,7 @@ projectsRequest.open('GET', 'projects.json');
 
 projectsRequest.onload = function () {
     let projectsData = JSON.parse(projectsData.responseText);
+    console.log(projectsData[0]);
     buildAllGalleryItems(projectsData);
     filterProjects("");
 }
