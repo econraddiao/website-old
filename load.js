@@ -8,6 +8,8 @@ let galleryWrapper = document.getElementById("gallery-wrapper");
 let gallery = document.getElementById("gallery");
 let img = document.getElementById("load-image");
 
+let projects;
+
 let xhr = new XMLHttpRequest();
 xhr.open('GET', 'projects.json');
 
