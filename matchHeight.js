@@ -5,7 +5,7 @@ window.addEventListener("resize", function () {
 
 function resizeAll() {
     let galleryElements = document.getElementsByClassName("project-container");
-    galleryElements.forEach(function () {
+        for(let els in galleryElements) {
         let id = document.getElementById(i);
         let item1 = id.firstChild;
         let item2 = id.lastChild;
