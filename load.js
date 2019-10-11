@@ -11,7 +11,7 @@ let projectButton;
 
 //delcare global var projects
 let projects;
-
+let galleryElements;
 //new xhr for projects.json
 let xhr = new XMLHttpRequest();
 xhr.open('GET', 'projects.json');
@@ -23,6 +23,7 @@ xhr.onload = function () {
     buildAllGalleryItems(projects);
     filterProjects("");
     vanity();
+    let galleryElements = document.getElementsByClassName("project-container");
 }
 //handle error
 xhr.onerror = function() {
