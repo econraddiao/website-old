@@ -95,13 +95,11 @@ img {
     transition: all .5s;
     margin: 0px auto;
 }
-
 #button-container:hover #load-button {
     color: rgba(234, 64, 237, 1.00);
     background: rgba(115, 251, 253, 1.00);
     border-color: rgba(234, 64, 237, 1.00);
 }
-
 #button-container:hover #load-image {
     top: calc(50% - 222px);
     clip-path: inset(0px 0px 0px 0px);
@@ -109,22 +107,21 @@ img {
 }
 #main {
     position: fixed;
-    height:100%;
-    width:100%;
-    top:0;
-    left:0;
-    
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
     visibility: hidden;
     justify-content: center;
     overflow: hidden;
 }
 /* -- HEADER -- */
 #tr-header {
-    position: absolute; 
-    top:0; 
-    left:0; 
-    width:100%; 
-    z-index:10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
     display: flex;
     align-items: flex-start;
     flex-direction: row;
@@ -145,7 +142,6 @@ img {
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url("img/Logo-mobile.png");
-    
 }
 .logo img {
     margin: 0;
@@ -180,11 +176,11 @@ li.active {
     color: rgba(115, 251, 253, 1.00);
 }
 #gallery-wrapper {
-    height:calc(100% - 60px);
+    height: calc(100% - 60px);
     width: 100%;
-    margin: 60px 0px; 
+    margin: 60px 0px;
     z-index: 1;
-    overflow-y: scroll; 
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
 #gallery-wrapper::-webkit-scrollbar {
@@ -192,7 +188,7 @@ li.active {
 }
 #gallery {
     padding: 0px 10px;
-    width:calc(100% - 20px); 
+    width: calc(100% - 20px);
 }
 /* -- PROJECT -- */
 .project-container {
@@ -217,7 +213,7 @@ li.active {
 .item2 {
     width: 100%;
     min-height: 0;
-    max-height: 80vh;    
+    max-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -280,9 +276,7 @@ iframe {
     width: 100%;
     border: none;
 }
-
 /* -- DESKTOP --*/
-
 @media only screen and (min-width: 800px) {
     .logo {
         background-image: url("img/Logo.png");
@@ -291,7 +285,6 @@ iframe {
     #gallery {
         max-width: 1390px;
         margin: 0px auto;
-
     }
     .project-container {
         flex-direction: row;
@@ -299,7 +292,7 @@ iframe {
     .item1 {
         width: 66.66%;
     }
-    .about .item1{
+    .about .item1 {
         padding: 50px;
     }
     .item2 {
@@ -307,7 +300,6 @@ iframe {
         padding: 50px;
     }
 }
-
 .hidden {
     display: none;
 }

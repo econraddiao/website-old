@@ -12,10 +12,11 @@ let xhr = new XMLHttpRequest();
 xhr.open('GET', 'projects.json');
 
 xhr.onload = function () {
-    let projectsData = JSON.parse(this.responseText);
-    console.log(projectsData[0]);
-    buildAllGalleryItems(projectsData);
+    let projects = JSON.parse(this.responseText);
+    console.log(projects[0]);
+    buildAllGalleryItems(projects);
     filterProjects("");
+    vanity();
 }
 
 xhr.onerror = function() {
