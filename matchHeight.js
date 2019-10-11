@@ -17,5 +17,5 @@ function resizeAll() {
         } else {
             item2.style.height = null;
         }
-    });
+    };
 }
