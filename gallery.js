@@ -35,7 +35,6 @@ function buildGalleryItem(proj, index) {
         button.setAttribute("onClick", "location.href='https://www.linkedin.com/in/ecdiao/';");
     } else {
         button.innerHTML = "Launch Project";
-        button.setAttribute("onClick", "location.href='https://www.linkedin.com/in/ecdiao/';");
     }
     item2.appendChild(button);
 }
