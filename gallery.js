@@ -110,7 +110,7 @@ function resizeAll() {
         console.log("offsetHeight: " + text.offsetHeight);
         console.log("clientHeight: " + text.clientHeight);
         console.log("height: " + text.height);
-        console.log("getboundingclientrect: " + text.getBoundingClientRect);
+        console.log("getboundingclientrect: " + text.getBoundingClientRect().height);
         $clamp(text, {clamp: clampHeight});
     };
 }
