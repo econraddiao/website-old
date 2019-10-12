@@ -20,7 +20,7 @@ xhr.open('GET', 'projects.json');
 //if xhr load data into projects and build gallery
 xhr.onload = function () {
     if (xhr.status >= 200 && xhr.status < 400) {
-        let projects = JSON.parse(this.responseText);
+        projects = JSON.parse(this.responseText);
         buildAllGalleryItems(projects);
         filterProjects("");
         vanity();
@@ -55,5 +55,5 @@ function enter() {
     main.style.overflow = "visible";
     main.style.visibility = "visible";
     resizeAll();
-    console.log(projects);
+    console.log(projects[0].tag);
 }
