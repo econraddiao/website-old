@@ -3,7 +3,9 @@ projectButton = document.querySelector("project-button");
 
 document.addEventListener('click', function (event) {
     if (event.target.classList.contains('project-button')) {
+        console.log(event.target);
         launch(event.target.parentNode.parentNode.id);
+
     }
 }, false);
 
