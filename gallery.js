@@ -25,12 +25,8 @@ function buildGalleryItem(proj, index) {
 
     let text = document.createElement("div");
     text.setAttribute("class", "text");
+    text.innerHTML = proj.description;
     item2.appendChild(text);
-    
-    let p = document.createElement("p");
-    p.innerHTML = proj.description;
-    text.appendChild(p);
-
 
     let button = document.createElement("button");
     button.setAttribute("class", "project-button");
@@ -110,7 +106,7 @@ function resizeAll() {
         } else {
             item2.style.height = null;
         }
-        $clamp(p, {clamp: 'auto'});
+        $clamp(text, {clamp: 'auto'});
     };
 }
 
