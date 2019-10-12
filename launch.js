@@ -4,12 +4,18 @@ document.addEventListener('click', function (event) {
     }
 }, false);
 
+document.addEventListener('click', function (event) {
+    if (event.target.classList.contains('project-button')) {
+        launch(event.target.parentNode.parentNode.id);
+    }
+}, false);
+
 function launch(id) {
     console.log("launching project " + id);
     document.getElementById("projects-tab").classList.remove("active");
     clearProjects();
     buildLaunchedProject(id);
-    history.pushState(null, null, "project/" + id);
+    history.pushState(null, null, null);
 }
 
 function buildLaunchedProject(id) {

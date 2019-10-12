@@ -86,3 +86,35 @@ function showAbout() {
     showAll();
     document.getElementById("gallery-wrapper").scroll(0, 99999);
 }
+
+// JavaScript Document
+window.addEventListener("resize", function () {
+    resizeAll();
+});
+
+function resizeAll() {
+    let galleryElements = document.getElementsByClassName("project-container");
+        for(let els of galleryElements) {
+        let item1 = els.firstChild;
+        let item2 = els.lastChild;
+        let img = item1.firstChild;
+        let text = item2.children[1];
+
+        if (window.innerWidth > 799) {
+            item2.style.height = item1.clientHeight - 100 + "px";
+        } else {
+            item2.style.height = null;
+        }
+    };
+}
+
+function vanity() {
+    let item1 = document.getElementsByClassName("about")[0].firstChild;
+    let aboutImg = item1.firstChild;
+    
+    let colorShifter = setInterval(shift, 500);
+    function shift() {
+        let color = "rgba(" + (Math.random() * 255).toString() + "," + (Math.random() * 255).toString() + "," + (Math.random() * 255).toString() + ",1.00)"
+        aboutImg.style.background = color;
+    }
+}
