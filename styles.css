@@ -233,6 +233,10 @@ h1 {
     line-height: 1.6;
     font-weight: 300;
 }
+p {
+    
+}
+
 .project-button {
     border: 2px solid black;
     width: -webkit-fit-content;
