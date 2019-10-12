@@ -55,5 +55,4 @@ function enter() {
     main.style.overflow = "visible";
     main.style.visibility = "visible";
     resizeAll();
-    console.log(projects[0].tag);
 }

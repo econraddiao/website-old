@@ -6,7 +6,7 @@ document.addEventListener('click', function (event) {
 
 function launch(id) {
     console.log("launching project " + id);
-    //history.pushState(null, null, id);
+    history.pushState(null, null, "project/" + id);
     document.getElementById("projects-tab").classList.remove("active");
     clearProjects();
     buildLaunchedProject(id);
