@@ -1,8 +1,6 @@
-document.addEventListener('click', function (event) {
-    if (event.target.classList.contains('project-button')) {
-        launch(event.target.parentNode.parentNode.id);
-    }
-}, false);
+window.addEventListener("popstate", function(e) {
+    showAll();
+});
 
 document.addEventListener('click', function (event) {
     if (event.target.classList.contains('project-button')) {
@@ -15,7 +13,7 @@ function launch(id) {
     document.getElementById("projects-tab").classList.remove("active");
     clearProjects();
     buildLaunchedProject(id);
-    history.pushState(null, null, null);
+    history.pushState(null, null, );
 }
 
 function buildLaunchedProject(id) {
