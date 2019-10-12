@@ -236,9 +236,6 @@ p {
     font-weight: 300;
     text-align: left;
     overflow: hidden;
-    white-space: pre-line;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
 }
 .project-button {
     border: 2px solid black;
