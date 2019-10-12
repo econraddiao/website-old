@@ -99,13 +99,13 @@ function resizeAll() {
         let item2 = els.lastChild;
         let img = item1.firstChild;
         let text = item2.children[1];
-
+        
         if (window.innerWidth > 799) {
             item2.style.height = item1.clientHeight - 100 + "px";
         } else {
             item2.style.height = null;
         }
-        $clamp(text, {clamp: 'auto'});
+        $clamp(text, {clamp: '2'});
     };
 }
 
