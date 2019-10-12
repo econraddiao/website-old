@@ -19,7 +19,7 @@ xhr.open('GET', 'projects.json');
 
 //if xhr load data into projects and build gallery
 xhr.onload = function () {
-    if (xhr.status >= 400 && xhr.status < 600) {
+    if (xhr.status >= 200 && xhr.status < 400) {
         projects = JSON.parse(this.responseText);
         buildAllGalleryItems(projects);
         filterProjects("");
