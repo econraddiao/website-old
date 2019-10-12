@@ -104,8 +104,7 @@ function resizeAll() {
         } else {
             item2.style.height = null;
         }
-        let clampHeight = Math.floor((Number(item2.style.height.slice(0, -2)) - item2.firstChild.offsetHeight - item2.lastChild.offsetHeight) / 24);
-        console.log(Number(item2.style.height.slice(0, -2)), item2.firstChild.offsetHeight, item2.lastChild.offsetHeight);
+        let clampHeight = Math.floor((Number(item2.style.height.slice(0, -2)) - item2.firstChild.offsetHeight - item2.lastChild.offsetHeight) / 22.4);
         console.log(clampHeight);
         $clamp(text, {clamp: clampHeight});
     };
