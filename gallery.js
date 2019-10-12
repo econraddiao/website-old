@@ -35,6 +35,7 @@ function buildGalleryItem(proj, index) {
         button.setAttribute("onClick", "location.href='https://www.linkedin.com/in/ecdiao/';");
     } else {
         button.innerHTML = "Launch Project";
+        button.setAttribute("onClick", "location.href='https://www.linkedin.com/in/ecdiao/';");
     }
     item2.appendChild(button);
 }
@@ -94,7 +95,7 @@ window.addEventListener("resize", function () {
 
 function resizeAll() {
     let galleryElements = document.getElementsByClassName("project-container");
-        for(let els of galleryElements) {
+    for (let els of galleryElements) {
         let item1 = els.firstChild;
         let item2 = els.lastChild;
         let img = item1.firstChild;
@@ -105,14 +106,19 @@ function resizeAll() {
         } else {
             item2.style.height = null;
         }
+
+        if (return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth) { 
+            text.
+        };
     };
 }
 
 function vanity() {
     let item1 = document.getElementsByClassName("about")[0].firstChild;
     let aboutImg = item1.firstChild;
-    
+
     let colorShifter = setInterval(shift, 500);
+
     function shift() {
         let color = "rgba(" + (Math.random() * 255).toString() + "," + (Math.random() * 255).toString() + "," + (Math.random() * 255).toString() + ",1.00)"
         aboutImg.style.background = color;

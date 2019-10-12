@@ -225,11 +225,13 @@ h1 {
     font-size: 2rem;
 }
 .text {
-    display: block;
     flex-grow: 1;
     flex-shrink: 1;
     overflow: hidden;
     white-space: pre-line;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 p {
     margin: 0;
