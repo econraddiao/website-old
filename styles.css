@@ -227,10 +227,6 @@ h1 {
 .text {
     flex-grow: 1;
     flex-shrink: 1;
-    overflow: hidden;
-    white-space: pre-line;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
 }
 p {
     margin: 0;
@@ -239,8 +235,10 @@ p {
     line-height: 1.6;
     font-weight: 300;
     text-align: left;
-    white-space: pre-wrap;
-    overflow: visible;
+    overflow: hidden;
+    white-space: pre-line;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
 }
 .project-button {
     border: 2px solid black;
