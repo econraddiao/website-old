@@ -105,10 +105,7 @@ function resizeAll() {
         } else {
             item2.style.height = null;
         }
-
-        if (text.scrollHeight > text.clientHeight || text.scrollWidth > text.clientWidth) {
-            text.style.cssText += "";
-        };
+        $clamp(myParagraph, {clamp: 'auto'});
     };
 }
 
