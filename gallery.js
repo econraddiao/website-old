@@ -110,7 +110,7 @@ function resizeAll() {
         } else {
             item2.style.height = null;
         }
-        $clamp(p, {clamp: '2'});
+        $clamp(p, {clamp: 'auto'});
     };
 }
 
