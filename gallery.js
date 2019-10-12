@@ -106,7 +106,11 @@ function resizeAll() {
             item2.style.height = null;
         }
         let clampHeight = text.offsetHeight / 22.4;
-        console.log(text.getBoundingClientRect);
+        console.log("scrollHeight: " + text.scrollHeight);
+        console.log("offsetHeight: " + text.offsetHeight);
+        console.log("clientHeight: " + text.clientHeight);
+        console.log("height: " + text.height);
+        console.log("getboundingclientrect: " + text.getBoundingClientRect);
         $clamp(text, {clamp: clampHeight});
     };
 }
