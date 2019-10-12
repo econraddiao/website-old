@@ -113,7 +113,6 @@ function resizeAll() {
 function vanity() {
     let item1 = document.getElementsByClassName("about")[0].firstChild;
     let aboutImg = item1.firstChild;
-
     let colorShifter = setInterval(shift, 500);
 
     function shift() {

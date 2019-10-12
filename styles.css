@@ -251,6 +251,7 @@ h1 {
     clip-path: circle(50%);
     -webkit-clip-path: circle(50%);
     object-fit: cover;
+    transform: scale(50%);
 }
 #tr-footer {
     height: 1px;
@@ -285,7 +286,6 @@ iframe {
         width: 66.66%;
     }
     .about .item1 {
-        padding: 50px;
     }
     .item2 {
         width: 33.33%;
