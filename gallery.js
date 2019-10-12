@@ -25,11 +25,8 @@ function buildGalleryItem(proj, index) {
 
     let text = document.createElement("div");
     text.setAttribute("class", "text");
+    text.innerHTML = proj.description;
     item2.appendChild(text);
-
-    let p = document.createElement("p");
-    p.innerHTML = proj.description;
-    text.appendChild(p);
     
     let button = document.createElement("button");
     button.setAttribute("class", "project-button");
@@ -102,14 +99,14 @@ function resizeAll() {
         let item2 = els.lastChild;
         let img = item1.firstChild;
         let text = item2.children[1];
-        let p = text.firstChild;
         if (window.innerWidth > 799) {
             item2.style.height = item1.clientHeight - 100 + "px";
         } else {
             item2.style.height = null;
         }
-        let clampHeight = text.clientHeight / 22.4;
-        $clamp(p, {clamp: clampHeight});
+        let clampHeight = (item1.clientHeight - 100 - item1.firstChild.clientHeight) / 22.4;
+        console.log(clampHeight);
+        $clamp(text, {clamp: clampHeight});
     };
 }
 
