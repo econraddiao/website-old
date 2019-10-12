@@ -227,15 +227,11 @@ h1 {
 .text {
     flex-grow: 1;
     flex-shrink: 1;
-}
-p {
     margin: 0;
     padding: 0px;
     font-size: 1rem;
     line-height: 1.6;
     font-weight: 300;
-    text-align: left;
-    overflow: hidden;
 }
 .project-button {
     border: 2px solid black;

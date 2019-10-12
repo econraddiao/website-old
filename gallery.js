@@ -100,13 +100,12 @@ function resizeAll() {
         let img = item1.firstChild;
         let text = item2.children[1];
         let p = text.firstChild;
-        let calcHeight = item1.clientHeight - 100;
         if (window.innerWidth > 799) {
             item2.style.height = calcHeight + "px";
         } else {
             item2.style.height = null;
         }
-        $clamp(text, {clamp: calcHeight + "px"});
+        $clamp(text, {clamp: text.clientHeight});
     };
 }
 
