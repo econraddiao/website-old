@@ -1,29 +1,20 @@
-
-projectButton = document.querySelector("project-button");
-
 document.addEventListener('click', function (event) {
     if (event.target.classList.contains('project-button')) {
-        console.log(event.target);
         launch(event.target.parentNode.parentNode.id);
-
     }
 }, false);
-
 
 function launch(id) {
     console.log("launching project " + id);
     //history.pushState(null, null, id);
-    console.log(history.state);
     document.getElementById("projects-tab").classList.remove("active");
-    
     clearProjects();
     buildLaunchedProject(id);
-    let soloProject = document.getElementsByClassName("solo")[0];
 }
 
 function buildLaunchedProject(id) {
     let newProject = document.createElement("div");
-    newProject.className = "project-container solo" + " " + projects[id].tag + " " + id;
+    newProject.className = "project-container solo " + projects[id].tag + " " + id;
     newProject.setAttribute("id", id);
     gallery.appendChild(newProject);
     
