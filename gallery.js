@@ -106,8 +106,8 @@ function resizeAll() {
             item2.style.height = null;
         }
 
-        if (element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth) {
-            
+        if (text.scrollHeight > text.clientHeight || text.scrollWidth > text.clientWidth) {
+            text.style.cssText += "";
         };
     };
 }
