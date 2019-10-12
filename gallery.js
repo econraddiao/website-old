@@ -105,7 +105,7 @@ function resizeAll() {
         } else {
             item2.style.height = null;
         }
-        let clampHeight = text.style.height / 22.4;
+        let clampHeight = text.height() / 22.4;
         console.log(clampHeight);
         $clamp(text, {clamp: clampHeight});
     };
