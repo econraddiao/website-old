@@ -105,7 +105,7 @@ function resizeAll() {
         } else {
             item2.style.height = null;
         }
-        $clamp(myParagraph, {clamp: 'auto'});
+        $clamp(text, {clamp: 'auto'});
     };
 }
 
