@@ -101,7 +101,7 @@ function resizeAll() {
         let text = item2.children[1];
         let p = text.firstChild;
         if (window.innerWidth > 799) {
-            item2.style.height = calcHeight + "px";
+            item2.style.height = item1.clientHeight - 100 + "px";
         } else {
             item2.style.height = null;
         }
