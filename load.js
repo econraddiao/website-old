@@ -6,7 +6,7 @@ let header = document.getElementById("tr-header");
 let main = document.getElementById("main");
 let galleryWrapper = document.getElementById("gallery-wrapper");
 let gallery = document.getElementById("gallery");
-let img = document.getElementById("load-image");
+let loadImg = document.getElementById("load-image");
 let projectButton;
 
 //delcare global var projects
@@ -39,19 +39,22 @@ xhr.send();
 //animate site enter
 function enter() {
     console.log("entering...");
-    main.style.visibility = "visible";
     loadButton.style.display = "none";
-    percBar.style.animationDuration = ".5s";
+    
+    main.style.visibility = "visible";
+    main.style.height = null;
+    
+    percBar.style.animationDuration = "3s";
     percBar.style.animationName = "enterPercentBar";
-    animContainer.style.height = "60px";
+
     animContainer.style.pointerEvents = "none";
+    
     header.style.opacity = 1;
     header.style.visibility = "visible";
-    img.style.clipPath = "inset(0px 0px 400px 0px)";
-    img.style.webkitClipPath = "inset(0px 0px 400px 0px)";
-    img.style.top = "calc(50% - 22px)";
-    main.style.height = null;
-    main.style.overflow = "visible";
-    main.style.visibility = "visible";
+    
+    loadImg.style.clipPath = "inset(0px 0px 400px 0px)";
+    loadImg.style.webkitClipPath = "inset(0px 0px 400px 0px)";
+    loadImg.style.top = "calc(50% - 22px)";
+    
     resizeAll();
 }
