@@ -39,7 +39,6 @@ xhr.send();
 //animate site enter
 function enter() {
     console.log("entering...");
-    percBar.style.top = "0";
     main.style.visibility = "visible";
     loadButton.style.display = "none";
     percBar.style.animationDuration = ".5s";
