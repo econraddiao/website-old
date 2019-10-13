@@ -42,7 +42,7 @@ function enter() {
     percBar.style.top = "0";
     main.style.visibility = "visible";
     loadButton.style.display = "none";
-    percBar.style.width = "100%";
+    percBar.style.animationDuration = ".5s";
     percBar.style.animationName = "enterPercentBar";
     animContainer.style.height = "60px";
     animContainer.style.pointerEvents = "none";
