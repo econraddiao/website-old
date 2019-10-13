@@ -30,7 +30,6 @@ function buildLaunchedProject(id) {
     let p = document.createElement("p");
     p.innerHTML = projects[id].description;
     newProject.appendChild(p);
-    console.log(projects[id].images);
     for (let i = 0; i < projects[id].images.length; i++) {
         let img = document.createElement("img");
         img.setAttribute("src", projects[id].images[i]);
