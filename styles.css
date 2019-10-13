@@ -54,13 +54,13 @@ img {
     z-index: 20;
     height: 100vh;
     width: 100vw;
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #load-percent-bar {
-    position: fixed;
+    position: absolute;
     animation: fillPercentBar 1s linear 0s 1 normal forwards running;
     height: 5px;
     width: 0px;
