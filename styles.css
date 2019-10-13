@@ -286,6 +286,10 @@ iframe {
     .item1 {
         width: 66.66%;
     }
+    .about .item1 {
+        max-height: 100%;
+        max-width: 100%;
+    }
     .item2 {
         width: 33.33%;
         padding: 50px;
