@@ -60,7 +60,7 @@ img {
 }
 #load-percent-bar {
     position: fixed;
-    animation: fillPercentBar .5s linear 0s 1 normal forwards running;
+    animation: fillPercentBar 1s linear 0s 1 normal forwards running;
     height: 5px;
     width: 0px;
     background-color: #333;
