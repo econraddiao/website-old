@@ -39,6 +39,7 @@ xhr.send();
 //animate site enter
 function enter() {
     console.log("entering...");
+    
     loadButton.style.display = "none";
     
     main.style.visibility = "visible";
