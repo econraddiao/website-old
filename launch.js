@@ -4,7 +4,6 @@ window.addEventListener("popstate", function(e) {
 
 document.addEventListener('click', function (event) {
     if (event.target.classList.contains('project-button') && !(event.target.parentNode.parentNode.classList.contains('about'))) {
-        console.log(event.target.parentNode.classList);
         launch(event.target.parentNode.parentNode.id);
     }
 }, false);
