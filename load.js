@@ -49,9 +49,8 @@ function enter() {
     percBar.style.animationName = "enterPercentBar";
 
     animContainer.style.pointerEvents = "none";
-    animContainer.style.display = "none";
+    //animContainer.style.display = "none";
     
-    header.style.opacity = 1;
     header.style.visibility = "visible";
     
     loadImg.style.clipPath = "inset(0px 0px 400px 0px)";

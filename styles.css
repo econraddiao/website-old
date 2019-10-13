@@ -134,7 +134,6 @@ img {
     align-content: center;
     text-align: center;
     visibility: hidden;
-    opacity: 0;
 }
 .logo {
     align-self: flex-start;
