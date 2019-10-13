@@ -15,10 +15,13 @@
         width: 100%;
         top: 0;
     }
-    100% {
+    50% {
         top: 0;
         height: 60px;
         width: 100%;
+    }
+    100% {
+        opacity: 0;
     }
 }
 @keyframes opaque {

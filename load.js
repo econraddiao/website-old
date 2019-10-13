@@ -45,7 +45,7 @@ function enter() {
     main.style.visibility = "visible";
     main.style.height = null;
     
-    percBar.style.animationDuration = ".5s";
+    percBar.style.animationDuration = "1s";
     percBar.style.animationName = "enterPercentBar";
 
     animContainer.style.pointerEvents = "none";
