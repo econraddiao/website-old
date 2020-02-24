@@ -43,7 +43,7 @@
     {
         "name": "hi.",
         "date": "1997",
-        "description": "My name is Conrad Diao, thanks for stopping by. I hope you like some of my work on display.\r\n\r\nSan Francisco, CA by way of\r\nAnn Arbor, MI by way of\r\nExeter, NH by way of\r\nSan Francisco, CA. \r\n\r\n In the past I've worked at <a href=\"https://salesforce.com\">Salesforce</a>, <a href=\"https://numie.co\">Numie</a>, <a href=\"https://poshly.com\">Poshly</a>, and <a href=\"https://qb3.org/about\">QB3</a>.",
+        "description": "My name is Conrad Diao, thanks for stopping by. I hope you like some of my work on display.\r \n \r \n San Francisco, CA by way of \r \n Ann Arbor, MI by way of \r \n Exeter, NH by way of \r \n San Francisco, CA. \r \n \r \n In the past I've worked at <a href=\"https://salesforce.com\">Salesforce</a>, <a href=\"https://numie.co\">Numie</a>, <a href=\"https://poshly.com\">Poshly</a>, and <a href=\"https://qb3.org/about\">QB3</a>.",
         "images": ["img/headshot-full.png"],
         "tag": "about"
     }
