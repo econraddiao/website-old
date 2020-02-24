@@ -28,7 +28,6 @@ xhr.onload = function () {
     } else {
         console.error('ERROR XMLHttpRequest returned error!');
     }
-
 }
 //handle error
 xhr.onerror = function () {
