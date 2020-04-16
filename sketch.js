@@ -69,7 +69,7 @@ rect((cols + 3) * spacing, 6 * spacing,
 		fill(255);
 		textSize(spacing / 2);
 		textFont(inconsolata);
-		text("I made a script in grasshopper to recreate this maze-like effect by lightpainting with the Kuka and an adafruit mircocontroller as in P1 and P2. In order to achieve the discontiuous lines, the program utilizes the accelerometer on the adafruit mircocontroller to turn off the LEDs as it retracts from the painting plane. \n\nUnfortunately, I wasn't able to demo this with the Kuka | PRC plugin, but I've gone through the process of of parametrically generating a tool path. This has been much more difficult than I imagined, and  think it goes to show the comedy of recreating such a simple and elegant piece of code in such a laborious way!",
+		text("I made a script in grasshopper to recreate this maze-like effect by lightpainting with the Kuka and an adafruit mircocontroller as in P1 and P2. In order to achieve the discontiuous lines, the program utilizes the accelerometer on the adafruit mircocontroller to turn off the LEDs as it retracts from the painting plane. \n\nUnfortunately, I wasn't able to demo this with the Kuka | PRC plugin, but I've gone through the process of of parametrically generating a tool path. This has been much more difficult than I imagined, and  think it goes to show the comedy of recreating such a simple and elegant piece of code in such a laborious way!\n\n Click anywhere to loop through some process screenshots.",
 			(cols + 3) * spacing, 6 * spacing,
 			width - (cols + 5) * spacing, height - 6 * spacing);
 }
