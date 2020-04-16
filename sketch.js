@@ -8,7 +8,6 @@ let inconsolata;
 let clicks = 0;
 let img1, img2, img3, img4;
 let images = [];
-var gif;
 
 function preload() {
 	img1 = loadImage('/img1.png');
@@ -16,7 +15,6 @@ function preload() {
 	img3 = loadImage('/img3.png');
 	img4 = loadImage('/img4.png');
 	images = [img1, img2, img3, img4];
-	gif = loadGif("/gif1.gif");
 	inconsolata = loadFont('/inconsolata.otf');
 }
 
