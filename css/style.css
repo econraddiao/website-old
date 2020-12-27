@@ -11,6 +11,7 @@
 
 a {
   text-decoration: none;
+  color: #ff4a00;
 }
 
 a:hover {
@@ -18,10 +19,17 @@ a:hover {
   color: white;
 }
 
-/* Hovered links */
+h1 {
+  font-family: 'IBM Plex Serif 700', serif;
+}
+
 /* SECTION */
 .section {
-  padding: 8rem 0 7rem;
+  padding: 1rem 0 1rem;
+}
+
+.header {
+  padding: 1rem;
 }
 
 /* NAV */
@@ -31,6 +39,7 @@ a:hover {
 
 bdi {
   font-family: 'IBM Plex Mono', monospace;
+  color: white;
 }
 
 .navigation .flourish {
@@ -41,53 +50,30 @@ bdi {
   padding-left: 8rem;
 }
 
-/* SHOWCASE */
-.showcase-heading,
-.showcase-description {
-  margin-bottom: 1.2rem;
+.navigation table tbody td {
+  padding: 0px;
+  border: 0px;
 }
 
-.showcase-heading {
-  text-align: left;
+ul {
+  list-style-type: none;
 }
 
-.showcase-img {
-  position: relative;
-  max-width: 80%;
-  margin: 3rem auto -12rem;
+.legend td {
+  font-family: 'IBM Plex Mono', monospace;
+  color: white;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
 }
 
-/* SECTION-A */
-.section-a {
-  background-image: url('../img/section-bg.jpg');
-  background-size: cover;
-  color: #fff;
-  padding-bottom: 5rem;
-}
-
-.section-a .fa {
-  font-size: 40px;
-  margin-bottom: .5rem;
-  color: #beebff;
-}
-
-.section-a h5 {
-  margin-bottom: .3rem;
-}
-
-/* SECTION-C */
-.section-c {
-  background-image: url('../img/section-bg.jpg');
-  background-size: cover;
-  color: #fff;
-}
-
-.section-c .section-description {
-  margin-bottom: 4rem;
+.legend td:hover {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* MEDIA QUERIES */
-@media(min-width:750pxd) {
+@media(min-width:750px) {
   .showcase-heading {
     font-size: 3.0rem;
     padding-top: 11rem;
