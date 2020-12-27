@@ -18,7 +18,7 @@ function pushToLegend(projectsJSON) {
     let a = document.createElement("a");
     let itemValue = d.title;
     a.innerHTML = itemValue;
-    a.setAttribute("href", `${itemValue}`);
+    a.setAttribute("href", `${itemValue.replace(" ", "-")}`);
     legendItem.appendChild(a);
     legend.appendChild(legendItem);
   });
