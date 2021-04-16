@@ -18,8 +18,17 @@ function pushToLegend(projectsJSON) {
     let a = document.createElement("a");
     let itemValue = d.title;
     a.innerHTML = itemValue;
-    a.setAttribute("href", `${itemValue.replace(" ", "-")}`);
+    a.setAttribute("href", "#");
+    a.setAttribute("onclick", `curateGallery(${itemValue.replace(" ", "-")})`);
+    a.setAttribute("onclick", `curateGallery()`);
+
     legendItem.appendChild(a);
     legend.appendChild(legendItem);
   });
+}
+
+function curateGallery(projectTitle) {
+  gallery = document.getElementById("gallery");
+  gallery.style.background = "fuchsia";
+  //gallery.innerHTML = projectTitle.;
 }

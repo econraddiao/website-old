@@ -11,5 +11,40 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quasi sapiente dolore at reprehenderit eius, magnam commodi nihil incidunt dolorem magni labore, pariatur. Adipisci, ut omnis natus sed at iusto odio ad, blanditiis ipsa fuga maiores dignissimos consectetur, laborum voluptas.",
     "images": "",
     "tags": ["data", "code"]
+  },
+  {
+    "title": "Caricature Cubes",
+    "year": "2019",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quasi sapiente dolore at reprehenderit eius, magnam commodi nihil incidunt dolorem magni labore, pariatur. Adipisci, ut omnis natus sed at iusto odio ad, blanditiis ipsa fuga maiores dignissimos consectetur, laborum voluptas.",
+    "images": ["img/projects/UG3_X4_1.jpg", "img/projects/UG3_X4_2.jpg", "img/projects/UG3_X4_3.jpg"],
+    "tags": ["architecture", "design"]
+  },
+  {
+    "title": "West Park House",
+    "year": "2018",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quasi sapiente dolore at reprehenderit eius, magnam commodi nihil incidunt dolorem magni labore, pariatur. Adipisci, ut omnis natus sed at iusto odio ad, blanditiis ipsa fuga maiores dignissimos consectetur, laborum voluptas.",
+    "images": ["img/projects/UG2_X3_1.jpg"],
+    "tags": ["architecture"]
+  },
+  {
+    "title": "Plinth Platter House",
+    "year": "2018",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quasi sapiente dolore at reprehenderit eius, magnam commodi nihil incidunt dolorem magni labore, pariatur. Adipisci, ut omnis natus sed at iusto odio ad, blanditiis ipsa fuga maiores dignissimos consectetur, laborum voluptas.",
+    "images": ["img/projects/UG2_X2_1.jpg", "img/projects/UG2_X2_2.jpg", "img/projects/UG2_X2_3.jpg"],
+    "tags": ["architecture"]
+  },
+  {
+    "title": "Reality, Superimposed",
+    "year": "2016",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quasi sapiente dolore at reprehenderit eius, magnam commodi nihil incidunt dolorem magni labore, pariatur. Adipisci, ut omnis natus sed at iusto odio ad, blanditiis ipsa fuga maiores dignissimos consectetur, laborum voluptas.",
+    "images": ["img/projects/202_X1_1.jpg", "img/projects/202_X1_2.jpg", "img/projects/202_X1_3.jpg", "img/projects/202_X1_4.jpg"],
+    "tags": ["architecture", "design"]
+  },
+  {
+    "title": "Villa Sul Lago Study",
+    "year": "2018",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto quasi sapiente dolore at reprehenderit eius, magnam commodi nihil incidunt dolorem magni labore, pariatur. Adipisci, ut omnis natus sed at iusto odio ad, blanditiis ipsa fuga maiores dignissimos consectetur, laborum voluptas.",
+    "images": ["img/projects/202_X4_1.jpg", "img/projects/202_X4_2.jpg", "img/projects/202_X4_3.jpg", "img/projects/202_X4_5.jpg", "img/projects/202_X4_6.jpg", "img/projects/202_X4_7.jpg"],
+    "tags": ["architecture"]
   }
 ]

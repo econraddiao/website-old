@@ -1,7 +1,8 @@
-.body,
-.section {
+body {
   font-family: 'IBM Plex Serif', serif, Icons;
-  background-color: ##F6EEEF;
+  font-size: 2.5em;
+  padding: 0;
+  margin: 0;
 }
 
 .active,
@@ -20,7 +21,7 @@ a:hover {
 }
 
 h1 {
-  font-family: 'IBM Plex Serif 700', serif;
+  font-weight: 400;
 }
 
 /* SECTION */
@@ -28,22 +29,23 @@ h1 {
   padding: 1rem 0 1rem;
 }
 
-.header {
-  padding: 1rem;
-}
-
 /* NAV */
 .navigation {
   text-align: left;
+  padding-left: 1rem;
 }
 
-bdi {
+.navigation bdi {
   font-family: 'IBM Plex Mono', monospace;
   color: white;
 }
 
 .navigation .flourish {
   margin-bottom: 0;
+  font-weight: 400;
+}
+.flourish-spacer {
+  height: 1rem;
 }
 
 .navigation .indented {
@@ -70,6 +72,13 @@ ul {
 .legend td:hover {
   width: 100%;
   box-sizing: border-box;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 0;
+  height: 100vh;
+  background-color: #ff4a00;
 }
 
 /* MEDIA QUERIES */
